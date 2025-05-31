@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <title>Weboldal Fejlesztés, Arculat, Grafika | PixelCraft Debrecen</title>
+    <title>Weboldal Fejlesztés, Arculat, Grafika, Szövegírás | PixelCraft Debrecen</title>
     <meta
       name="description"
       content="Mutasd meg vállalkozásod igazi arcát! Egyedi weboldal, arculat és grafikai tervezés, amellyel kiemelkedsz a versenytársak közül. Kezdjük el együtt!"
@@ -159,19 +159,177 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "PixelCraft",
+        "alternateName": "PixelCraft Debrecen",
         "url": "https://pixelcraft.hu",
-        "logo": "https://pixelcraft.hu/assets/pixelcraft_light.png",
-        "description": "Weboldal fejlesztés, arculat tervezés és grafikai design szolgáltatások kis- és középvállalkozások számára Debrecenben.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pixelcraft.hu/assets/pixelcraft_light.png",
+          "width": 400,
+          "height": 100
+        },
+        "image": [
+          "https://pixelcraft.hu/assets/og-image.jpg",
+          "https://pixelcraft.hu/assets/pixelcraft_light.png"
+        ],
+        "description": "Weboldal fejlesztés, arculat tervezés és grafikai design szolgáltatások kis- és középvállalkozások számára Debrecenben. Mutasd meg vállalkozásod igazi arcát egyedi weboldalakkal és professzionális arculattal.",
+        "slogan": "Mutasd meg vállalkozásod igazi arcát a világnak",
+        "foundingDate": "2024",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Debrecen",
-          "addressCountry": "HU"
+          "addressRegion": "Hajdú-Bihar",
+          "addressCountry": "HU",
+          "postalCode": "4000"
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "availableLanguage": "Hungarian"
-        }
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "47.5316",
+          "longitude": "21.6273"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Debrecen"
+          },
+          {
+            "@type": "State",
+            "name": "Hajdú-Bihar"
+          },
+          {
+            "@type": "Country",
+            "name": "Magyarország"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["Hungarian", "hu"],
+            "url": "https://pixelcraft.hu/rolunk.html#ajanlat",
+            "contactOption": "TollFree"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "availableLanguage": ["Hungarian", "hu"],
+            "url": "https://pixelcraft.hu/rolunk.html#ajanlat"
+          }
+        ],
+        "sameAs": ["https://pixelcraft.hu"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "PixelCraft Szolgáltatások",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Weboldal fejlesztés",
+                "description": "Egyedi weboldal tervezés és fejlesztés kis- és középvállalkozások számára. SEO optimalizált, reszponzív és felhasználóbarát weboldalak.",
+                "category": "Web Development",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "PixelCraft"
+                }
+              },
+              "availability": "InStock",
+              "businessFunction": "Sell"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Arculat tervezés",
+                "description": "Egységes vizuális megjelenés tervezése vállalkozásoknak. Logó, színvilág, tipográfia és brand guideline készítése.",
+                "category": "Brand Design",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "PixelCraft"
+                }
+              },
+              "availability": "InStock",
+              "businessFunction": "Sell"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Grafikai munkák",
+                "description": "Professzionális grafikai tervezés: plakátok, szórólapok, social media grafikák, prezentációk és egyéb marketing anyagok.",
+                "category": "Graphic Design",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "PixelCraft"
+                }
+              },
+              "availability": "InStock",
+              "businessFunction": "Sell"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Szövegírás és SEO",
+                "description": "Kreatív szövegírás és SEO optimalizáció weboldalakhoz és marketing anyagokhoz. Keresőbarát tartalom készítése.",
+                "category": "Content Writing",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "PixelCraft"
+                }
+              },
+              "availability": "InStock",
+              "businessFunction": "Sell"
+            }
+          ]
+        },
+        "knowsAbout": [
+          "Weboldal fejlesztés",
+          "Arculat tervezés",
+          "Grafikai design",
+          "SEO optimalizáció",
+          "Márkaépítés",
+          "Digitális marketing",
+          "Felhasználói élmény (UX)",
+          "Responsive design",
+          "Brand identity"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Ingyenes konzultáció",
+            "description": "Ingyenes első konzultáció új ügyfelek számára projektjeik megbeszéléséhez.",
+            "price": "0",
+            "priceCurrency": "HUF"
+          },
+          {
+            "@type": "Offer",
+            "name": "Egyedi árajánlat",
+            "description": "Minden projekt egyedi, személyre szabott árajánlatot kap a konkrét igények alapján.",
+            "url": "https://pixelcraft.hu/rolunk.html#ajanlat"
+          }
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Kis- és középvállalkozások",
+          "geographicArea": {
+            "@type": "Place",
+            "name": "Debrecen, Hajdú-Bihar, Magyarország"
+          }
+        },
+        "brand": {
+          "@type": "Brand",
+          "name": "PixelCraft",
+          "logo": "https://pixelcraft.hu/assets/pixelcraft_light.png",
+          "slogan": "Mutasd meg vállalkozásod igazi arcát a világnak"
+        },
+        "mission": "Támogatni kis-és középvállalkozások projektjeinek megjelenését és webes jelenlétének fejlesztését tudatos márkaépítéssel.",
+        "specialty": [
+          "Egyedi weboldal fejlesztés",
+          "Átgondolt arculattervezés",
+          "Professzionális grafikai munkák",
+          "SEO optimalizált tartalom",
+          "Kisvállalkozás-barát árazás"
+        ]
       }
     </script>
   </head>
@@ -481,7 +639,11 @@
       <!-- ######################################################################### -->
 
       <!-- Siker section -->
-      <section class="siker flex justify-center align-center py-100 px-20 py-60-s overflow-hidden">
+      <section
+        id="siker"
+        aria-labelledby="siker-title"
+        class="siker flex justify-center align-center py-100 px-20 py-60-s overflow-hidden"
+      >
         <!-- Siker content -->
         <div class="siker-container flex flex-col justify-center align-center py-30 gap-80">
           <!-- Siker title -->
@@ -593,6 +755,7 @@
       <!-- Szolgáltatások section -->
       <section
         id="szolgaltatas"
+        aria-labelledby="szolgaltatas-title"
         class="szolgaltatas flex justify-center align-center py-100 px-20 py-60-s overflow-hidden"
       >
         <!-- Szolgáltatások content -->
@@ -750,6 +913,7 @@
       <!-- Rólunk section -->
       <section
         id="rolunk"
+        aria-labelledby="faq-title"
         class="rolunk flex flex-col justify-center align-center py-100 px-20 py-60-s overflow-hidden"
       >
         <!-- Rólunk container -->
@@ -759,8 +923,13 @@
           <!-- Rólunk left -->
           <div class="rolunk-left flex flex-col align-center gap-10">
             <!-- Rólunk -->
-            <h2 class="visually-hidden">Víziónk a folyamatos fejlődés</h2>
-            <div class="rolunk-title text-center t-35 tw-600 lh-11 pb-30">
+            <h2 id="faq-title" class="visually-hidden">Víziónk a folyamatos fejlődés</h2>
+            <div
+              class="rolunk-title text-center t-35 tw-600 lh-11 pb-30"
+              aria-labelledby="faq-title"
+              role="heading"
+              aria-level="2"
+            >
               <div class="rolunk-title-word" aria-hidden="true">Víziónk</div>
               <div class="rolunk-title-word" aria-hidden="true">a</div>
               <div
