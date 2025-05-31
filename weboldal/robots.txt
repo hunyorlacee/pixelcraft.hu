@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pixelcraft.hu/sitemap.xml
+
+# Optional: Crawl delay (uncomment if needed)
+# Crawl-delay: 1
