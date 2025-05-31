@@ -1,0 +1,253 @@
+/* szovegiras */
+
+.szovegiras {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 100%),
+    url("../assets/szovegiras_hero_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+.szovegiras-title {
+  overflow: visible !important;
+}
+@media screen and (max-width: 767px) {
+  .szovegiras-title {
+    max-width: 400px;
+  }
+}
+.szovegiras-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.szovegiras-left {
+  width: 300px;
+  min-width: 300px;
+  height: auto;
+}
+
+.brandbook-1 {
+  background: url("../assets/rolunk_img.jpg") no-repeat right center;
+  background-size: 85%;
+}
+.brandbook-1 img {
+  box-shadow: 0px 0px 30px -5px rgb(34, 34, 34, 0.5);
+  transform: rotate(-10deg);
+}
+.brandbook-2:nth-child(1) {
+  position: absolute;
+  top: -5px;
+}
+.szovegiras-right {
+  max-width: 700px;
+  min-width: 400px;
+  flex: 1 1;
+}
+@media screen and (max-width: 405px) {
+  .szovegiras-right {
+    min-width: 300px;
+  }
+}
+.swiper-szovegiras {
+  max-width: 100%;
+  border-radius: 15px;
+}
+.swiper-wrapper-szovegiras {
+  max-width: 300px;
+}
+.swiper-slide-szovegiras {
+  color: var(--text);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  background-color: var(--pop);
+  border-radius: 20px !important;
+  max-width: 250px;
+  max-height: 250px;
+}
+.swiper-slide-szovegiras span {
+  font-size: 35px;
+  color: var(--green);
+  padding-top: 30px;
+}
+.swiper-slide-szovegiras h4 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 5px;
+}
+.swiper-slide-szovegiras p {
+  color: var(--text2);
+  padding: 10px 20px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.swiper-navigation-szovegiras {
+  display: flex;
+  gap: 20px;
+}
+.swiper-button-prev-szovegiras,
+.swiper-button-next-szovegiras {
+  padding: 10px 20px;
+  font-size: 25px;
+  background: var(--pop);
+  color: var(--color1);
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1025px) {
+  .swiper-navigation-szovegiras {
+    display: none;
+  }
+  .swiper-szovegiras {
+    border-radius: 0px;
+  }
+}
+
+/* szovegiras SECTION-1 */
+
+.szovegiras-1 {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 100%),
+    url("../assets/szovegiras_1_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+.szovegiras-1-title {
+  overflow: visible !important;
+}
+.szovegiras-1-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.szovegiras-1-container {
+  max-width: 800px;
+}
+.szovegiras-1 .img-container {
+  max-width: 700px;
+}
+
+/* SZOLGÁLTATÁS */
+
+.szolgaltatas {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 100%),
+    url("../assets/szolgaltatas_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+.szolgaltatas-title {
+  overflow: visible !important;
+}
+.szolgaltatas-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.szolgaltatas-container {
+  max-width: 1000px;
+}
+.szolgaltatas .img-container {
+  width: 90vw;
+  max-width: 700px;
+  overflow: hidden;
+}
+.szolgaltatas p {
+  max-width: 800px;
+}
+.szolgaltatas-wrapper {
+  max-width: 1000px;
+  position: relative;
+}
+.swiper-szolgaltatas {
+  border-radius: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .swiper-szolgaltatas {
+    border-radius: 0px;
+  }
+}
+.swiper-slide-szolgaltatas {
+  max-width: 350px;
+}
+.swiper-card-szolgaltatas {
+  width: 100%;
+  box-sizing: border-box;
+}
+.swiper-card-szolgaltatas-1 {
+  background: url("../assets/weboldal_bg.jpg") no-repeat top center;
+  background-size: 100% auto;
+  background-color: var(--pop);
+}
+.swiper-card-szolgaltatas-2 {
+  background: url("../assets/szovegiras_bg.jpg") no-repeat top center;
+  background-size: 100% auto;
+  background-color: var(--pop);
+}
+.swiper-card-szolgaltatas-3 {
+  background: url("../assets/szovegiras_bg.jpg") no-repeat top center;
+  background-size: 100% auto;
+  background-color: var(--pop);
+}
+.swiper-card-szolgaltatas-4 {
+  background: url("../assets/szovegiras_bg.jpg") no-repeat top center;
+  background-size: 100% auto;
+  background-color: var(--pop);
+}
+.swiper-card img {
+  width: 130px;
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide-szolgaltatas {
+    max-width: 320px;
+  }
+}
+
+/* FAQ */
+
+.faq-container {
+  max-width: 800px;
+}
+@media screen and (max-width: 1025px) {
+  .faq-container {
+    max-width: 600px;
+  }
+}
+.faq-title {
+  overflow: visible !important;
+}
+.faq-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.faq-item {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-question {
+  cursor: pointer;
+}
+.faq-icon i {
+  transition: transform 0.5s ease;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+.faq-item.active .faq-icon i {
+  transform: rotate(45deg);
+}
+.faq-item.active .faq-question h3 {
+  color: var(--green);
+}

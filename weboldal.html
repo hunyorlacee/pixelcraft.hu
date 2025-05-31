@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Weboldal fejlesztés</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+
+    <!-- Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Covered+By+Your+Grace&family=Gochi+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      /*font-family: "Gochi Hand", serif; // font-family: "Poppins", serif; // font-family: "Covered By Your Grace", serif; // font-family: "Caveat", serif; */
+    </style>
+
+    <!-- Fontawesome -->
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/regular.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/77f4067974.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/weboldal.css" />
+
+    <!-- GSAP stylesheets -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Swiper stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXKG3C2WYT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-QXKG3C2WYT");
+    </script>
+  </head>
+
+  <!-- ######################################################################### -->
+
+  <body>
+    <!-- Header section -->
+    <header>
+      <!-- Navigation menu section desktop -->
+      <nav aria-label="Menüsáv">
+        <!-- Site logo -->
+        <a href="index.html" rel="noopener noreferrer">
+          <img
+            id="logo"
+            src="assets/pixelcraft_blue_dark.png"
+            alt="PixelCraft logo, arculat, weboldal tervezés, grafika, szövegírás, SEO"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- Navigation menu -->
+        <ul aria-label="Főmenü">
+          <li>
+            <a href="weboldal.html" title="Tudj meg többet a weboldal tervezésről"
+              ><i class="fa-solid fa-laptop menu-icon c-blue" aria-hidden="true"></i>Weboldal</a
+            >
+          </li>
+          <li>
+            <a href="arculat.html" title="Fedezd fel az arculattervezés lehetőségeit"
+              ><i class="fa-solid fa-rainbow menu-icon c-purple" aria-hidden="true"></i>Arculat</a
+            >
+          </li>
+          <li>
+            <a href="grafika.html" title="Ismerd meg a grafikai tervezés részleteit"
+              ><i class="fa-solid fa-icons menu-icon c-yellow" aria-hidden="true"></i>Grafika</a
+            >
+          </li>
+          <li>
+            <a href="szovegiras.html" title="Tudj meg többet a szövegírásról és SEO-ról"
+              ><i class="fa-solid fa-highlighter menu-icon c-green" aria-hidden="true"></i
+              >Szövegírás</a
+            >
+          </li>
+          <li>
+            <a href="rolunk.html" title="Tudj meg többet rólunk"
+              ><i class="fa-solid fa-user-astronaut menu-icon c-accent" aria-hidden="true"></i
+              >Rólunk</a
+            >
+          </li>
+        </ul>
+
+        <!-- Navigation menu interactives-->
+        <div class="nav-interactive" aria-hidden="true">
+          <!-- Dark-light mode switch -->
+          <label class="switch" aria-label="Sötét és világos téma kapcsoló">
+            <input type="checkbox" id="theme-toggle" checked />
+            <span class="slider"></span>
+          </label>
+
+          <!-- Navigation action button -->
+          <a href="rolunk.html#ajanlat" class="nav-button bg-pop t-18 br-15" aria-label="Áraink"
+            >Áraink</a
+          >
+
+          <!-- Mobile menu icons -->
+          <svg
+            class="menu-icon-1"
+            height="30px"
+            fill="var(--text)"
+            style="padding: 0 25px"
+            aria-label="Mobil menü megnyit"
+            aria-haspopup="true"
+            aria-controls="mobile-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+            <title>Mobile menu toggle open</title>
+          </svg>
+          <svg
+            class="menu-icon-2"
+            height="30px"
+            fill="var(--text)"
+            style="padding: 0 25px"
+            aria-label="Mobil menü bezár"
+            aria-haspopup="false"
+            aria-controls="mobile-menu"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+            />
+            <title>Mobile menu toggle close</title>
+          </svg>
+        </div>
+      </nav>
+
+      <!-- Mobile menu dropdown -->
+      <div id="mobile-menu" class="mobile-menu">
+        <!-- Mobile menu section -->
+        <div class="mobile-menu-items flex flex-col gap-20">
+          <!-- Mobile menu -->
+          <ul role="menu" aria-label="Mobil menü">
+            <li role="menuitem" aria-label="Weboldal">
+              <a href="weboldal.html">Weboldal</a>
+            </li>
+            <li role="menuitem" aria-label="Arculat">
+              <a href="arculat.html">Arculat</a>
+            </li>
+            <li role="menuitem" aria-label="Grafika">
+              <a href="grafika.html">Grafika</a>
+            </li>
+            <li role="menuitem" aria-label="Szövegírás">
+              <a href="szovegiras.html">Szövegírás</a>
+            </li>
+            <li role="menuitem" aria-label="Rólunk">
+              <a href="rolunk.html">Rólunk</a>
+            </li>
+            <li role="menuitem" aria-label="Áraink">
+              <a href="rolunk.html#ajanlat" class="c-blue">Áraink</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile dropdown cards -->
+        <div aria-label="Mobil menü részletező kártyák" class="swiper swiper-mobil" role="region">
+          <div class="swiper-wrapper swiper-wrapper-mobil">
+            <!-- Mobile dropdown card 1 -->
+            <div
+              aria-label="Weboldal tervezés részletező"
+              role="group"
+              class="swiper-slide swiper-slide-mobil"
+            >
+              <a
+                href="weboldal.html"
+                class="mobile-card-link"
+                aria-label="Weboldal tervezés részletező"
+              >
+                <div class="mobile-card">
+                  <img
+                    class="w-80 pt-10"
+                    style="margin: 0 auto"
+                    src="assets/weboldal.png"
+                    alt="Weboldal tervezés"
+                    loading="lazy"
+                  />
+                  <h3 class="c-blue tw-500 pl-20 pt-10">Weboldal</h3>
+                  <p class="c-text2 lh-14 px-20">Pont amire projektednek szüksége van</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Mobile dropdown card 2 -->
+            <div
+              aria-label="Arculattervezés részletező"
+              role="group"
+              class="swiper-slide swiper-slide-mobil"
+            >
+              <a
+                href="arculat.html"
+                class="mobile-card-link"
+                aria-label="Arculattervezés részletező"
+              >
+                <div class="mobile-card">
+                  <img
+                    class="w-80 pt-10"
+                    style="margin: 0 auto"
+                    src="assets/arculat.png"
+                    alt="Arculat tervezés"
+                    loading="lazy"
+                  />
+                  <h3 class="c-purple tw-500 pl-20 pt-10">Arculat</h3>
+                  <p class="c-text2 lh-14 px-20">Légy büszke ötleidre és arra, amit képviselsz</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Mobile dropdown card 3 -->
+            <div
+              aria-label="Grafiki tervezés részletező"
+              role="group"
+              class="swiper-slide swiper-slide-mobil"
+            >
+              <a
+                href="grafika.html"
+                class="mobile-card-link"
+                aria-label="Grafikai tervezés részletező"
+              >
+                <div class="mobile-card">
+                  <img
+                    class="w-80 pt-10"
+                    style="margin: 0 auto"
+                    src="assets/grafika.png"
+                    alt="Grafikai tervezés"
+                    loading="lazy"
+                  />
+                  <h3 class="c-yellow tw-500 pl-20 pt-10">Grafika</h3>
+                  <p class="c-text2 lh-14 px-20">Mutasd meg, hogy igazán profi vagy</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Mobile dropdown card 4 -->
+            <div
+              aria-label="Szövegírás részletező"
+              role="group"
+              class="swiper-slide swiper-slide-mobil"
+            >
+              <a href="szovegiras.html" class="mobile-card-link" aria-label="Szövegírás részletező">
+                <div class="mobile-card">
+                  <img
+                    class="w-80 pt-10"
+                    style="margin: 0 auto"
+                    src="assets/szoveg.png"
+                    alt="Szövegírás, SEO"
+                    loading="lazy"
+                  />
+                  <h3 class="c-green tw-500 pl-20 pt-10">Szöveg..</h3>
+                  <p class="c-text2 lh-14 px-20">Kommunikáld értékeidet a közönségnek</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ######################################################################### -->
+
+    <main>
+      <!-- Weboldal section -->
+      <section
+        id="weboldal"
+        class="weboldal flex flex-col justify-center align-center py-100 pt-50-m gap-50 gap-10-s overflow-hidden"
+      >
+        <!-- Weboldal title -->
+        <h3 class="visually-hidden">Nyiss ablakot a közönségnek</h3>
+        <div class="weboldal-title t-50 t-40-s t-35-xs tw-600 text-center lh-13 px-20 py-30">
+          <div class="weboldal-title-word" aria-hidden="true">Nyiss</div>
+          <div class="weboldal-title-word handwritten c-blue" aria-hidden="true">ablakot</div>
+          <div class="weboldal-title-word" aria-hidden="true">a</div>
+          <div class="weboldal-title-word" aria-hidden="true">közönségnek</div>
+          <div class="weboldal-title-word" aria-hidden="true">
+            <i class="fa-solid fa-users-viewfinder c-blue"></i>
+          </div>
+        </div>
+
+        <!-- Weboldal content -->
+        <div class="weboldal-content flex flex-row flex-wrap justify-center align-center pt-20">
+          <!-- Weboldal left column -->
+          <div
+            class="weboldal-left flex flex-col justify-center align-center gap-10 m-30 weboldal-gsap"
+          >
+            <!-- Weboldal left title -->
+            <h3 class="t-28 tw-500 pb-30 text-center lh-11">
+              Tűnj ki a<br /><span class="c-blue">weben</span>
+            </h3>
+
+            <!-- Weboldal left swiper -->
+            <div class="swiper swiper-weboldal-11">
+              <div class="swiper-wrapper swiper-wrapper-weboldal-11">
+                <div class="swiper-slide swiper-slide-weboldal-11">
+                  <img src="assets/ui1.png" alt="Weboldal készítés, webdesign kurzusok" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-11">
+                  <img src="assets/ui2.png" alt="Weboldal készítés, webdesign edzőterem" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-11">
+                  <img src="assets/ui3.png" alt="Weboldal készítés, webdesign barber" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-11">
+                  <img src="assets/ui4.png" alt="Weboldal készítés, webdesign étterem" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-11">
+                  <img src="assets/ui5.png" alt="Weboldal készítés, webdesign fodrász" />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper swiper-weboldal-12">
+              <div class="swiper-wrapper swiper-wrapper-weboldal-12">
+                <div class="swiper-slide swiper-slide-weboldal-12">
+                  <img src="assets/ui6.png" alt="Weboldal készítés, webdesign barber" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-12">
+                  <img src="assets/ui7.png" alt="Weboldal készítés, webdesign webshop" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-12">
+                  <img src="assets/ui8.png" alt="Weboldal készítés, webdesign bútor" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-12">
+                  <img src="assets/ui9.png" alt="Weboldal készítés, webdesign berendezés" />
+                </div>
+                <div class="swiper-slide swiper-slide-weboldal-12">
+                  <img src="assets/ui10.png" alt="Weboldal készítés, webdesign állatok" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weboldal right column -->
+          <div class="weboldal-right flex flex-col justify-center gap-20 pt-20">
+            <!-- Weboldal right text area -->
+            <div class="weboldal-text flex flex-col align-start gap-20 px-20 pl-30-s">
+              <h2 class="t-24 tw-500 c-blue bg-blue br-15 px-15 py-5 weboldal-gsap">
+                <i class="bi bi-patch-check-fill"></i> Weboldal fejlesztés
+              </h2>
+
+              <p class="t-22 c-text2 weboldal-gsap">
+                Építsünk vállalkozásodnak egyedi webes megjelenést, amely kiemel a versenytársak
+                közül, növeli megítélésed és hitelességed potenciális ügyfeleid, az
+                <i class="bi bi-stars c-blue"></i>Ai és a keresőmotorok szemében.
+              </p>
+
+              <div
+                class="weboldal-cards-wrapper flex justify-between align-center pt-30 w-100 weboldal-gsap"
+              >
+                <h4 class="t-26 tw-500 weboldal-gsap">
+                  Lépéselőny <span class="c-blue">neked</span>
+                </h4>
+
+                <!-- Weboldal right swiper control -->
+                <div class="swiper-navigation-weboldal-2">
+                  <button class="swiper-button-prev-weboldal-2">
+                    <i class="fa-solid fa-arrow-left c-blue"></i>
+                  </button>
+                  <button class="swiper-button-next-weboldal-2">
+                    <i class="fa-solid fa-arrow-right c-blue"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weboldal right cards area -->
+            <div class="weboldal-cards relative weboldal-gsap">
+              <!-- Weboldal right swiper -->
+              <div class="swiper swiper-weboldal-2">
+                <div class="swiper-wrapper swiper-wrapper-weboldal-2">
+                  <div class="swiper-slide swiper-slide-weboldal-2">
+                    <span><i class="bi bi-chat-square-heart"></i></span>
+                    <h4>Megítélés</h4>
+                    <p>Első benyomásra nincs második lehetőség. Mutass profi arcot.</p>
+                  </div>
+                  <div class="swiper-slide swiper-slide-weboldal-2">
+                    <span><i class="bi bi-phone"></i></span>
+                    <h4>Elérhetőség</h4>
+                    <p>Elérhető leszel néhány kattintással bárki zsebében.</p>
+                  </div>
+                  <div class="swiper-slide swiper-slide-weboldal-2">
+                    <span><i class="bi bi-patch-check"></i></span>
+                    <h4>Megbízhatóság</h4>
+                    <p>Növeled vállalkozásod hitelességét az ügyfelek és az Ai szemében.</p>
+                  </div>
+                  <div class="swiper-slide swiper-slide-weboldal-2">
+                    <span><i class="bi bi-megaphone"></i></span>
+                    <h4>Kommunikáció</h4>
+                    <p>Hatékonyan közvetítheted értékeidet potenciális ügyfeleidnek.</p>
+                  </div>
+                  <div class="swiper-slide swiper-slide-weboldal-2">
+                    <span><i class="bi bi-clipboard-data"></i></span>
+                    <h4>Analitika</h4>
+                    <p>Értékes adatokat szerezhetsz a folyamatos fejlődéshez.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ######################################################################### -->
+
+      <!-- Prompt section -->
+      <section
+        id="prompt"
+        class="prompt flex justify-center align-center py-100 px-20 overflow-hidden"
+      >
+        <!-- Prompt content -->
+        <div class="prompt-container flex flex-col justify-center align-center gap-30 w-100">
+          <!-- Prompt title -->
+          <h2 class="visually-hidden">Bízd a kódot a kockákra</h2>
+          <div class="prompt-title t-40 t-35-s t-35-xs tw-600 text-center lh-13 px-30">
+            <div class="prompt-title-word" aria-hidden="true">Bízd</div>
+            <div class="prompt-title-word" aria-hidden="true">a</div>
+            <div class="prompt-title-word handwritten c-blue" aria-hidden="true">{kódot}</div>
+            <div class="prompt-title-word" aria-hidden="true">a</div>
+            <div class="prompt-title-word" aria-hidden="true">kockákra</div>
+            <div class="prompt-title-word" aria-hidden="true">
+              <i class="bi bi-stars c-blue"></i>
+            </div>
+          </div>
+
+          <p class="t-22 t-20-s c-text2 text-center">
+            Egy profi webes megoldás gondos tervezést és megvalósítást igényel. Bízd ránk a
+            technikai kihívásokat, hogy te közben üzleti céljaidra koncentrálhass.
+          </p>
+
+          <!-- Prompt code -->
+
+          <div class="prompt-window bg-pop w-100 br-10 m-20 relative">
+            <div class="prompt-buttons">
+              <span class="button close"></span>
+              <span class="button minimize"></span>
+              <span class="button maximize"></span>
+            </div>
+            <div class="flex flex-col align-start p-50 p-20-s">
+              <pre id="code-display"></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ######################################################################### -->
+
+      <!-- Szolgáltatások section -->
+      <section
+        id="szolgaltatas"
+        class="szolgaltatas flex justify-center align-center py-100 px-20 overflow-hidden"
+      >
+        <!-- Szolgáltatások content -->
+        <div class="szolgaltatas-container flex flex-col justify-center align-center gap-30">
+          <!-- Szolgáltatások title -->
+          <h2 class="visually-hidden">Ügyfeleid a fókuszban</h2>
+          <div class="szolgaltatas-title t-40 t-35-s t-35-xs tw-600 text-center lh-14 px-30">
+            <div class="szolgaltatas-title-word" aria-hidden="true">Ügyfeleid</div>
+            <div class="szolgaltatas-title-word" aria-hidden="true">
+              <i class="fa-solid fa-users-viewfinder c-blue"></i>
+            </div>
+            <div class="szolgaltatas-title-word" aria-hidden="true">a</div>
+            <div class="szolgaltatas-title-word handwritten c-blue" aria-hidden="true">
+              fókuszban
+            </div>
+          </div>
+
+          <!-- Szolgaltatasok img -->
+          <div class="img-container br-20">
+            <img src="assets/weboldal_img.jpg" alt="Weboldal az ügyfelekért" />
+          </div>
+
+          <!-- Szolgaltatasok text -->
+          <div class="flex flex-col justify-center align-center gap-25 px-30 pb-50">
+            <p class="t-22 t-20-s c-text2 text-center">
+              Legyen ügyfeleid és felhasználóid élménye az első, hogy náluk te lehess a legjobb
+              választás. Tervezzük közösen weboldalad a cégbemutatótól egészen a webáruházig, hogy
+              meghódíthasd a világot!
+            </p>
+            <div class="flex flex-wrap justify-center align-center gap-15">
+              <a
+                href="rolunk.html#ajanlat"
+                class="btn btn-primary c-bg t-18 tw-500 br-15"
+                style="background-color: var(--blue)"
+                aria-label="Árajánlat részletek"
+                >Árajánlat</a
+              >
+              <a
+                href="#faq"
+                class="btn btn-primary c-blue bg-blue br-15 t-18 text-center text-plain"
+                aria-label="Gyakran ismételt kérdések"
+                >Gyakori kérdések</a
+              >
+            </div>
+          </div>
+
+          <!-- Szolgaltatasok swiper -->
+          <div class="szolgaltatas-wrapper w-100vw">
+            <div class="swiper swiper-szolgaltatas">
+              <div class="swiper-wrapper swiper-wrapper-szolgaltatas">
+                <div class="swiper-slide swiper-slide-szolgaltatas">
+                  <div
+                    class="swiper-card-szolgaltatas swiper-card-szolgaltatas-2 br-20 bg-pop p-30"
+                  >
+                    <img
+                      class="w-50 pt-40"
+                      src="assets/arculat.png"
+                      alt="Arculat tervezés"
+                      loading="lazy"
+                    />
+                    <h3 class="t-26 tw-500 c-purple">Arculat tervezés</h3>
+                    <p class="t-18 c-text2 lh-13 pt-10 pb-15">
+                      Építsünk egységes vizuális megjelenést vállalkozásodnak, amely hűen képviseli
+                      értékeidet és megjegyezhetővé tesz.
+                    </p>
+                    <a
+                      href="arculat.html"
+                      class="btn px-20 py-5 c-purple bg-purple tw-500 br-15"
+                      aria-label="Arculat tervezés részletek"
+                      >részletek <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-szolgaltatas">
+                  <div
+                    class="swiper-card-szolgaltatas swiper-card-szolgaltatas-3 br-20 bg-pop p-30"
+                  >
+                    <img
+                      class="w-50 pt-40"
+                      src="assets/grafika.png"
+                      alt="Grafikai tervezés"
+                      loading="lazy"
+                    />
+                    <h3 class="t-26 tw-500 c-yellow">Grafikai munkák</h3>
+                    <p class="t-18 c-text2 lh-13 pt-10 pb-15">
+                      Tervezzünk esztétikus grafikákat, amelyek megragadják a figyelmet és
+                      megmutatják, hogy igazán profi vagy.
+                    </p>
+                    <a
+                      href="grafika.html"
+                      class="btn px-20 py-5 c-yellow bg-yellow tw-500 br-15"
+                      aria-label="Grafikai munkák részletek"
+                      >részletek <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-szolgaltatas">
+                  <div
+                    class="swiper-card-szolgaltatas swiper-card-szolgaltatas-4 br-20 bg-pop p-30"
+                  >
+                    <img
+                      class="w-50 pt-40"
+                      src="assets/szoveg.png"
+                      alt="Szövegírás, SEO"
+                      loading="lazy"
+                    />
+                    <h3 class="t-26 tw-500 c-green">Szövegírás</h3>
+                    <p class="t-18 c-text2 lh-13 pt-10 pb-15">
+                      Kommunikáljunk ötleteid és értékeid úgy, hogy mindenki megértse őket. Az
+                      ügyfeleid, az Ai és még a keresőmotorok is.
+                    </p>
+                    <a
+                      href="szovegiras.html"
+                      class="btn px-20 py-5 c-green bg-green tw-500 br-15"
+                      aria-label="Szövegírás részletek"
+                      >részletek <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-szolgaltatas">
+                  <div
+                    class="swiper-card-szolgaltatas swiper-card-szolgaltatas-1 br-20 bg-pop p-30"
+                  >
+                    <img
+                      class="w-50 pt-40"
+                      src="assets/weboldal.png"
+                      alt="Weboldal tervezés"
+                      loading="lazy"
+                    />
+                    <h3 class="t-26 tw-500 c-blue">Weboldal fejlesztés</h3>
+                    <p class="t-18 c-text2 lh-13 pt-10 pb-15">
+                      Tervezzünk projektednek egyedi weboldalt, amely kiemel a tömegből az
+                      ügyfeleid, az Ai és a keresőmotorok szemében.
+                    </p>
+                    <a
+                      href="#weboldal"
+                      class="btn px-20 py-5 c-blue bg-blue tw-500 br-15"
+                      aria-label="Weboldal tervezés részletek"
+                      >részletek <i class="fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination swiper-pagination-szolgaltatas"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ######################################################################### -->
+
+      <!-- FAQ section -->
+      <section
+        id="faq"
+        class="faq flex flex-col align-center gap-30 py-100 px-20 overflow-hidden"
+        aria-labelledby="faq-title"
+      >
+        <!-- FAQ title -->
+        <h2 id="faq-title" class="visually-hidden">Gyakori kérdések</h2>
+        <div class="faq-title t-30 tw-600 text-center">
+          <div class="faq-title-word" aria-hidden="true">Gyakori</div>
+          <div class="faq-title-word handwritten c-blue" aria-hidden="true">kérdések</div>
+        </div>
+
+        <!-- FAQ container -->
+        <div class="faq-container flex flex-col gap-20">
+          <!-- FAQ item -->
+          <div class="faq-item flex flex-col bg-pop br-20 p-30 py-20">
+            <div class="faq-question flex justify-between align-center">
+              <h3 class="t-18 tw-400">Miért fontos egy profi weboldal vállalkozásod életében?</h3>
+              <span class="faq-icon t-22 c-blue pl-20"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p class="tw-300 lh-15 pt-20">
+                Vállalkozásként webes megjelenésed potenciális ügyfeleid számára az első benyomás
+                alapja. Egy profi weboldal nemcsak hitelességet és szakértelmet tükröz, hanem
+                elérhetővé teszi szolgáltatásaid és termékeid a nap 24 órájában. Egy jól felépített
+                weboldal történetet mesél el, értékeket kommunikál, kiemel versenytársaid közül és
+                növeli az ügyfélbizalmat. Az online jelenlét ma már alapvető, hiszen minden csupán
+                egy kattintásnyira van.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ item -->
+          <div class="faq-item flex flex-col bg-pop br-20 p-30 py-20">
+            <div class="faq-question flex justify-between align-center">
+              <h3 class="t-18 tw-400">
+                Milyen webfejlesztési szolgáltatásokat kínál a PixelCraft?
+              </h3>
+              <span class="faq-icon t-22 c-blue pl-20"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p class="tw-300 lh-15 pt-20">
+                Szolgáltatásaink között szerepel az egyedi weboldalak tervezése és fejlesztése,
+                UI/UX tervezés és optimalizálás, e-kereskedelmi megoldások kivitelezése, weboldal
+                karbantartás és technikai támogatás. Ezen felül segítünk weboldalad teljesítményének
+                növelésében, reszponzív mobilbarát megoldások kialakításában, keresőoptimalizálásban
+                (SEO), valamint adatgyűjtési eszközök integrálásában.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ item -->
+          <div class="faq-item flex flex-col bg-pop br-20 p-30 py-20">
+            <div class="faq-question flex justify-between align-center">
+              <h3 class="t-18 tw-400">Milyen weboldalra van szüksége vállalkozásodnak?</h3>
+              <span class="faq-icon t-22 c-blue pl-20"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p class="tw-300 lh-15 pt-20">
+                A tökéletes weboldal sok tényezőtől függ: célközönségedtől, szolgáltatásaid
+                jellegétől, a versenytársaktól, és természetesen az üzleti céljaidtól.
+                Munkafolyamatunk első lépése, hogy megismerjük vállalkozásod profilját és
+                kidolgozzuk a megfelelő fejlesztési stratégiát. Legyen szó informatív bemutatkozó
+                weboldalról, specifikus termékbemutató oldalról, dinamikus tartalmakat kezelő
+                platformról vagy akár egy webáruházról, a célunk mindig az, hogy a leginkább
+                testhezálló megoldást nyújtsuk. Kérj ajánlatot egyszerűen és gyorsan.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ item -->
+          <div class="faq-item flex flex-col bg-pop br-20 p-30 py-20">
+            <div class="faq-question flex justify-between align-center">
+              <h3 class="t-18 tw-400">
+                Milyen lépésekből áll a weboldal-tervezési és fejlesztési folyamat?
+              </h3>
+              <span class="faq-icon t-22 c-blue pl-20"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p class="tw-300 lh-15 pt-20">
+                Egy weboldal tervezése és fejlesztése strukturált, mégis kreatív folyamat. Első
+                lépésként feltérképezzük céljaidat, megismerjük vállalkozásod értékeit, üzenetét és
+                jövőképét, majd ezek alapján egy személyre szabott stratégiát dolgozunk ki.
+                Elkészítjük a vizuális és technikai terveket, majd ezeket lépésről lépésre
+                megvalósítjuk. Kiemelt figyelmet fordítunk a funkcionalitásra, a felhasználói
+                élményre (UX), a keresőbarát felépítésre, valamint az esztétikára.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ item -->
+          <div class="faq-item flex flex-col bg-pop br-20 p-30 py-20">
+            <div class="faq-question flex justify-between align-center">
+              <h3 class="t-18 tw-400">Mennyibe kerül egy egyedi weboldal fejlesztése?</h3>
+              <span class="faq-icon t-22 c-blue pl-20"><i class="fa-solid fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p class="tw-300 lh-15 pt-20">
+                A weboldalak árát számos tényező befolyásolja, például az oldal összetettsége,
+                funkciói és a szükséges erőforrások. Egy egyszerű bemutatkozó oldal más költségekkel
+                jár, mint egy összetett, integrált e-kereskedelmi platform. A PixelCraft-nál minden
+                projektet egyedi árajánlattal indítunk, amely az igényeidre és a költségvetésedre
+                szabott. Ha van egy ötleted, keress meg minket – hisz csupán néhány kattintás.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ######################################################################### -->
+
+    <footer class="pt-50">
+      <p class="p-30 tw-300 text-center">
+        © 2025 <span class="c-blue">PixelCraft</span> Minden jog Fenntartva! | Stock fotók: Freepik
+        |
+        <a href="rolunk.html#ajanlat" class="c-blue text-plain" aria-label="Áraink link">Áraink</a>
+        |
+        <a href="rolunk.html" class="c-blue text-plain" aria-label="Kapcsolat link">Kapcsolat</a>
+      </p>
+    </footer>
+
+    <!-- JS scripts -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Website JS -->
+    <script src="js/weboldal.js" defer></script>
+    <script src="js/mobile-toggle.js" defer></script>
+    <!--script src="js/GSAP.js" defer></script-->
+    <script src="js/faq.js" defer></script>
+  </body>
+</html>

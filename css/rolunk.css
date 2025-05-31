@@ -1,0 +1,235 @@
+/* Rolunk */
+
+.rolunk {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 100%),
+    url("../assets/rolunk_hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+.rolunk-title {
+  overflow: visible !important;
+}
+@media screen and (max-width: 767px) {
+  .rolunk-title {
+    max-width: 400px;
+  }
+}
+.rolunk-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.rolunk-left {
+  width: 80%;
+  min-width: 250px;
+  max-width: 350px;
+  height: auto;
+}
+.rolunk-right {
+  max-width: 700px;
+  min-width: 400px;
+  flex: 1 1;
+}
+.avatar .img-container {
+  width: 90px;
+  min-width: 90px;
+  height: 90px;
+  min-height: 90px;
+  border-radius: 500px;
+}
+@media screen and (max-width: 405px) {
+  .rolunk-right {
+    min-width: 300px;
+  }
+}
+.cf-turnstile {
+  margin: 10px 0;
+}
+
+.form-group .cf-turnstile {
+  align-self: flex-start;
+}
+
+/* RÓLUNK */
+
+.ajanlat {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 60%, var(--bg) 80%),
+    url("../assets/weboldal_hero_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+.ajanlat-title {
+  overflow: visible !important;
+}
+@media screen and (max-width: 767px) {
+  .ajanlat-title {
+    max-width: 400px;
+  }
+}
+.ajanlat-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.ajanlat-left,
+.ajanlat-right {
+  max-width: 450px;
+}
+@media screen and (max-width: 990px) {
+  .ajanlat-left {
+    max-width: 340px;
+  }
+  .ajanlat-right {
+    max-width: 380px;
+  }
+}
+.ajanlat .img-container {
+  width: 70%;
+  max-width: 300px;
+}
+.ajanlat .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-left: 10%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+label {
+  font-size: 15px;
+  color: var(--accent);
+}
+input,
+textarea {
+  background-color: var(--pop);
+  border: solid 2px var(--text2);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  color: var(--text);
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+textarea {
+  height: 200px;
+  resize: vertical;
+}
+.info-text {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  background: var(--green-bg);
+  color: var(--green);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  background: var(--red-bg);
+  color: var(--red);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.loading {
+  display: none;
+}
+
+.spinner {
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* FAQ */
+
+.faq-container {
+  max-width: 800px;
+}
+@media screen and (max-width: 1025px) {
+  .faq-container {
+    max-width: 600px;
+  }
+}
+.faq-title {
+  overflow: visible !important;
+}
+.faq-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.faq-item {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-question {
+  cursor: pointer;
+}
+.faq-icon i {
+  transition: transform 0.5s ease;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+.faq-item.active .faq-icon i {
+  transform: rotate(45deg);
+}
+.faq-item.active .faq-question h3 {
+  color: var(--accent);
+}
