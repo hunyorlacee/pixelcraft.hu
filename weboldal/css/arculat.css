@@ -128,6 +128,9 @@
 .arculat-1 .img-container {
   min-width: 500px;
 }
+.arculat-1 p {
+  max-width: 800px;
+}
 
 /* SZOLGÁLTATÁS */
 
