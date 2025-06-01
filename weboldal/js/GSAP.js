@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: el,
         start: "top+=10% bottom", // when the element enters the bottom of viewport
-        end: "top+=50% center", // when the element is at center of viewport
-        scrub: 1, // optional: ties animation progress to scroll
+        end: "center-=50% center", // when the element is at center of viewport
+        scrub: 2, // optional: ties animation progress to scroll
       },
     });
   });
