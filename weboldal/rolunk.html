@@ -598,10 +598,12 @@
           role="heading"
           aria-level="1"
         >
-          <div class="rolunk-title-word handwritten c-accent" aria-hidden="true">Tervezünk</div>
-          <div class="rolunk-title-word" aria-hidden="true">és</div>
-          <div class="rolunk-title-word" aria-hidden="true">fejlesztünk</div>
-          <div class="rolunk-title-word c-accent" aria-hidden="true">
+          <div class="rolunk-title-word handwritten c-accent gsap-hero-title" aria-hidden="true">
+            Tervezünk
+          </div>
+          <div class="rolunk-title-word gsap-hero-title" aria-hidden="true">és</div>
+          <div class="rolunk-title-word gsap-hero-title" aria-hidden="true">fejlesztünk</div>
+          <div class="rolunk-title-word c-accent gsap-hero-title" aria-hidden="true">
             <i class="bi bi-cloud-upload-fill"></i>
           </div>
         </div>
@@ -611,7 +613,7 @@
           <!-- Rólunk hero left column -->
           <div class="rolunk-left flex flex-col align-center m-30">
             <!-- Rólunk hero left content -->
-            <div class="img-container br-20 overflow-hidden">
+            <div class="img-container br-20 overflow-hidden gsap-hero">
               <img
                 id="hero_img"
                 class="w-100"
@@ -625,23 +627,23 @@
           <div class="rolunk-right flex flex-col justify-center gap-20 pt-20">
             <!-- Rólunk hero right text area -->
             <div class="rolunk-text flex flex-col align-start gap-20 px-20 pl-30-s">
-              <h2 class="t-24 tw-500 c-accent bg-accent-tr br-15 px-15 py-5">
+              <h2 class="t-24 tw-500 c-accent bg-accent-tr br-15 px-15 py-5 gsap-hero">
                 <i class="bi bi-patch-check-fill"></i> Rólunk
               </h2>
 
-              <p class="t-22 c-text2">
+              <p class="t-22 c-text2 gsap-hero">
                 Tervezzük és építsük közösen projekjeidet a neten. Küldetésünk kis-és
                 középvállalkozások támogatása webes jelenlétük és megjelenésük fejlesztésével, hogy
                 nekik csak azzal kelljen foglalkozniuk, ami igazán fontos.
               </p>
 
               <div class="avatar flex flex-nowrap align-center gap-20 br-20 pt-20">
-                <div class="img-container overflow-hidden">
+                <div class="img-container overflow-hidden gsap-hero">
                   <img class="w-100" src="assets/hunyor_laszlo.jpg" alt="Hunyor László" />
                 </div>
                 <div class="flex flex-col">
-                  <p class="t-22 tw-500">Hunyor László</p>
-                  <p class="t-16 tw-300 c-text2">
+                  <p class="t-22 tw-500 gsap-hero">Hunyor László</p>
+                  <p class="t-16 tw-300 c-text2 gsap-hero">
                     Igyekszünk a funkionalitást és a megjelenést úgy ötvözni, hogy maradandó nyomot
                     hagyjunk az ügyfelekben
                   </p>
@@ -667,10 +669,12 @@
           role="heading"
           aria-level="2"
         >
-          <div class="ajanlat-title-word" aria-hidden="true">Kérj</div>
-          <div class="ajanlat-title-word handwritten c-accent" aria-hidden="true">ajánlatot</div>
-          <div class="ajanlat-title-word" aria-hidden="true">egyszerűen</div>
-          <div class="ajanlat-title-word c-accent" aria-hidden="true">
+          <div class="ajanlat-title-word gsap" aria-hidden="true">Kérj</div>
+          <div class="ajanlat-title-word handwritten c-accent gsap" aria-hidden="true">
+            ajánlatot
+          </div>
+          <div class="ajanlat-title-word gsap" aria-hidden="true">egyszerűen</div>
+          <div class="ajanlat-title-word c-accent gsap" aria-hidden="true">
             <i class="bi bi-send"></i>
           </div>
         </div>
@@ -681,7 +685,7 @@
           <!-- Ajánlat left -->
           <div class="ajanlat-left flex flex-col align-center gap-10">
             <!-- Ajánlat img -->
-            <div class="img-container">
+            <div class="img-container gsap">
               <img
                 id="ajanlat_img"
                 src="assets/rolunk_ajanlat_dark.png"
@@ -690,7 +694,7 @@
               />
             </div>
 
-            <p class="t-18 text-center c-text2 pl-10 pt-20">
+            <p class="t-18 text-center c-text2 pl-10 pt-20 gsap">
               Célunk olyan árakon dolgozni, hogy minden vállalkozás életében természetes szerepet
               töltsön be a márkaépítés és webes elérhetőség
               <br /><br /><span class="c-accent t-20">
@@ -701,29 +705,27 @@
 
           <!-- Ajánlat right -->
           <div class="ajanlat-right flex flex-col justify-center gap-30">
-            <div
-              class="flex flex-col align-start bg-pop br-20 gap-25 gap-20-xs p-40 p-30-s rolunk-gsap"
-            >
+            <div class="flex flex-col align-start bg-pop br-20 gap-25 gap-20-xs p-40 p-30-s gsap">
               <form id="contactForm">
-                <div class="form-group">
+                <div class="form-group gsap">
                   <label for="name">Név *</label>
                   <input type="text" id="name" name="name" required />
                   <div class="error" id="nameError"></div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group gsap">
                   <label for="email">Email cím *</label>
                   <input type="email" id="email" name="email" required />
                   <div class="error" id="emailError"></div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group gsap">
                   <label for="phone">Telefonszám</label>
                   <input type="tel" id="phone" name="phone" />
                   <div class="error" id="phoneError"></div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group gsap">
                   <label for="project">Projekted rövid leírása *</label>
                   <textarea
                     id="project"
@@ -734,14 +736,14 @@
                   <div class="error" id="projectError"></div>
                 </div>
 
-                <p class="info-text">
+                <p class="info-text gsap">
                   Ajánlatkérést követően felvesszük veled a kapcsolatot a megadott elérhetőségeiden
                   és tájékoztatunk lehetőségeidről.
                 </p>
 
                 <div id="messages"></div>
 
-                <div class="form-group">
+                <div class="form-group gsap">
                   <div
                     class="cf-turnstile"
                     data-sitekey="0x4AAAAAABfaqx9desx1zH3f"
@@ -783,8 +785,8 @@
           role="heading"
           aria-level="2"
         >
-          <div class="faq-title-word" aria-hidden="true">Gyakori</div>
-          <div class="faq-title-word handwritten c-accent" aria-hidden="true">kérdések</div>
+          <div class="faq-title-word gsap" aria-hidden="true">Gyakori</div>
+          <div class="faq-title-word handwritten c-accent gsap" aria-hidden="true">kérdések</div>
         </div>
 
         <!-- FAQ container -->
@@ -899,7 +901,7 @@
     <!-- Website JS -->
     <script src="js/rolunk.js" defer></script>
     <script src="js/mobile-toggle.js" defer></script>
-    <!--script src="js/GSAP.js" defer></script-->
+    <script src="js/GSAP.js" defer></script>
     <script src="js/faq.js" defer></script>
   </body>
 </html>

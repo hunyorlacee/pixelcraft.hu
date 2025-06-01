@@ -404,3 +404,13 @@ input:checked + .slider:before {
 .mobile-card p {
   font-size: 15px;
 }
+
+/* GSAP */
+.gsap,
+.gsap-hero,
+.gsap-hero-2,
+.gsap-hero-img,
+.gsap-hero-title {
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Optional: force GPU acceleration */
+}

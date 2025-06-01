@@ -593,13 +593,15 @@
           role="heading"
           aria-level="1"
         >
-          <div class="hero-title-word" aria-hidden="true">Mutasd</div>
-          <div class="hero-title-word" aria-hidden="true">meg</div>
-          <div class="hero-title-word" aria-hidden="true">vállalkozásod</div>
-          <div class="hero-title-word handwritten c-accent pr-5" aria-hidden="true">igazi</div>
-          <div class="hero-title-word" aria-hidden="true">arcát</div>
-          <div class="hero-title-word" aria-hidden="true">a</div>
-          <div class="hero-title-word" aria-hidden="true">
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">Mutasd</div>
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">meg</div>
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">vállalkozásod</div>
+          <div class="hero-title-word handwritten c-accent pr-5 gsap-hero-title" aria-hidden="true">
+            igazi
+          </div>
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">arcát</div>
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">a</div>
+          <div class="hero-title-word gsap-hero-title" aria-hidden="true">
             <i class="fa-solid fa-earth-europe c-accent pr-5" style="font-size: 0.8em"></i>világnak
           </div>
         </div>
@@ -610,22 +612,38 @@
           identitását, hogy kiemelkedj a tömegből.
         </p>
         <div class="hero-text text-center pt-30 pb-0" role="group" aria-label="Szolgáltatások">
-          <a href="#szolgaltatas" class="hero-text-word" aria-label="Weboldal tervezés">
+          <a
+            href="#szolgaltatas"
+            class="hero-text-word gsap-hero-title"
+            aria-label="Weboldal tervezés"
+          >
             <i class="fa-solid fa-laptop c-blue weboldal-icon"></i>Weboldal
           </a>
-          <a href="#szolgaltatas" class="hero-text-word" aria-label="Arculattervezés">
+          <a
+            href="#szolgaltatas"
+            class="hero-text-word gsap-hero-title"
+            aria-label="Arculattervezés"
+          >
             <i class="fa-solid fa-rainbow c-purple arculat-icon"></i>Arculat
           </a>
-          <a href="#szolgaltatas" class="hero-text-word" aria-label="Grafikai tervezés">
+          <a
+            href="#szolgaltatas"
+            class="hero-text-word gsap-hero-title"
+            aria-label="Grafikai tervezés"
+          >
             <i class="fa-solid fa-icons c-yellow grafika-icon"></i>Grafika
           </a>
-          <a href="#szolgaltatas" class="hero-text-word" aria-label="Szövegírás, SEO">
+          <a
+            href="#szolgaltatas"
+            class="hero-text-word gsap-hero-title"
+            aria-label="Szövegírás, SEO"
+          >
             <i class="fa-solid fa-highlighter c-green szovegiras-icon"></i>Szövegírás
           </a>
         </div>
 
         <!-- Hero img -->
-        <picture id="hero-img" class="hero-img">
+        <picture id="hero-img" class="hero-img gsap-hero-img">
           <source id="hero-source" srcset="assets/hero.webp" type="image/webp" />
           <img
             id="hero-fallback"
@@ -654,10 +672,12 @@
             role="heading"
             aria-level="2"
           >
-            <div class="siker-title-word" aria-hidden="true">Építkezz</div>
-            <div class="siker-title-word handwritten c-accent" aria-hidden="true">tudatosan</div>
-            <div class="siker-title-word" aria-hidden="true">és</div>
-            <div class="siker-title-word" aria-hidden="true">
+            <div class="siker-title-word gsap" aria-hidden="true">Építkezz</div>
+            <div class="siker-title-word handwritten c-accent gsap" aria-hidden="true">
+              tudatosan
+            </div>
+            <div class="siker-title-word gsap" aria-hidden="true">és</div>
+            <div class="siker-title-word gsap" aria-hidden="true">
               átgondoltan <i style="font-size: 0.9em" class="fa-solid fa-lightbulb c-accent"></i>
             </div>
           </div>
@@ -674,18 +694,18 @@
             >
               <div class="siker-text flex flex-col align-start justify-center gap-15">
                 <a class="text-plain" href="#szolgaltatas" aria-label="Első benyomás">
-                  <h3 class="t-24 tw-600 c-yellow bg-yellow br-15 px-15 py-5 siker-gsap">
+                  <h3 class="t-24 tw-600 c-yellow bg-yellow br-15 px-15 py-5 gsap">
                     <i style="font-size: 0.9em" class="bi bi-chat-square-heart-fill"></i> első
                     benyomás
                   </h3>
                 </a>
-                <p class="t-22 tw-500 siker-gsap">
+                <p class="t-22 tw-500 gsap">
                   Két szolgáltatás vagy termék közül az emberek tudattalanul is a
                   <span class="handwritten c-yellow">vizuálisan megnyerőbbet</span>
                   részesítik előnyben. Ez a halo-effektus.
                 </p>
               </div>
-              <div class="siker-img siker-gsap">
+              <div class="siker-img gsap">
                 <img
                   class="w-100"
                   id="siker-img-1"
@@ -698,7 +718,7 @@
 
             <!-- Siker row 2 -->
             <div class="siker-row flex flex-row flex-wrap justify-center align-center gap-50">
-              <div class="siker-img order-1 siker-gsap">
+              <div class="siker-img order-1 gsap">
                 <img
                   class="w-100"
                   id="siker-img-2"
@@ -709,11 +729,11 @@
               </div>
               <div class="siker-text flex flex-col align-start justify-center gap-15 order-2">
                 <a class="text-plain" href="#szolgaltatas" aria-label="Kommunikáció">
-                  <h3 class="t-24 tw-600 c-green bg-green br-15 px-15 py-5 siker-gsap">
+                  <h3 class="t-24 tw-600 c-green bg-green br-15 px-15 py-5 gsap">
                     <i style="font-size: 0.9em" class="bi bi-megaphone-fill"></i> kommunikáció
                   </h3>
                 </a>
-                <p class="t-22 tw-500 siker-gsap">
+                <p class="t-22 tw-500 gsap gsap">
                   A tudatosan megfogalmazott és egyértelműen<span class="handwritten c-green"
                     >közvetített értékek</span
                   >
@@ -726,17 +746,17 @@
             <div class="siker-row flex flex-row flex-wrap justify-center align-center gap-50">
               <div class="siker-text flex flex-col align-start justify-center gap-15">
                 <a class="text-plain" href="#szolgaltatas" aria-label="Elérhetőség">
-                  <h3 class="t-24 tw-600 c-blue bg-blue br-15 px-15 py-5 siker-gsap">
+                  <h3 class="t-24 tw-600 c-blue bg-blue br-15 px-15 py-5 gsap">
                     <i style="font-size: 0.9em" class="bi bi-patch-check-fill"></i> elérhetőség
                   </h3>
                 </a>
-                <p class="t-22 tw-500 siker-gsap">
+                <p class="t-22 tw-500 gsap">
                   Az <span class="handwritten c-blue">egyszerűen</span> és intuitív módon
                   <span class="handwritten c-blue">hozzáférhető</span>
                   szolgáltatások és termékek növelik a sikeres konverziók számát.
                 </p>
               </div>
-              <div class="siker-img siker-gsap">
+              <div class="siker-img gsap">
                 <img
                   class="w-100"
                   id="siker-img-3"
@@ -768,23 +788,23 @@
             role="heading"
             aria-level="2"
           >
-            <div class="szolgaltatas-title-word" aria-hidden="true">Szolgáltatások</div>
-            <div class="szolgaltatas-title-word" aria-hidden="true">a</div>
-            <div class="szolgaltatas-title-word handwritten c-accent" aria-hidden="true">
+            <div class="szolgaltatas-title-word gsap" aria-hidden="true">Szolgáltatások</div>
+            <div class="szolgaltatas-title-word gsap" aria-hidden="true">a</div>
+            <div class="szolgaltatas-title-word handwritten c-accent gsap" aria-hidden="true">
               sikerre
             </div>
-            <div class="szolgaltatas-title-word" aria-hidden="true">hangolva</div>
+            <div class="szolgaltatas-title-word gsap" aria-hidden="true">hangolva</div>
           </div>
 
           <!-- Szolgaltatasok img -->
           <img
-            class="szolgaltatas-img"
+            class="szolgaltatas-img gsap"
             src="assets/szolgaltatas_img.png"
             alt="Szolgáltatások a sikerre hangolva"
           />
 
           <!-- Szolgaltatasok text -->
-          <div class="flex flex-col justify-center align-center gap-25 px-30 szolgaltatas-gsap">
+          <div class="flex flex-col justify-center align-center gap-25 px-30 gsap">
             <p class="t-22 t-20-s c-text2 text-center px-20 px-0-s">
               Tűnj ki versenytársaid közül és emeljük ötleteidet a következő szintre. Egyedi
               weboldal fejlesztés, arculat és grafikai elemek, célzott kommunikáció a hosszútávú
@@ -807,8 +827,8 @@
           </div>
 
           <!-- Szolgaltatasok swiper -->
-          <div class="szolgaltatas-wrapper flex align-start w-100vw pt-50 szolgaltatas-gsap">
-            <div class="swiper swiper-szolgaltatas">
+          <div class="szolgaltatas-wrapper flex align-start w-100vw pt-50">
+            <div class="swiper swiper-szolgaltatas gsap">
               <div class="swiper-wrapper swiper-wrapper-szolgaltatas">
                 <div class="swiper-slide swiper-slide-szolgaltatas">
                   <div
@@ -930,10 +950,10 @@
               role="heading"
               aria-level="2"
             >
-              <div class="rolunk-title-word" aria-hidden="true">Víziónk</div>
-              <div class="rolunk-title-word" aria-hidden="true">a</div>
+              <div class="rolunk-title-word gsap" aria-hidden="true">Víziónk</div>
+              <div class="rolunk-title-word gsap" aria-hidden="true">a</div>
               <div
-                class="rolunk-title-word handwritten c-accent"
+                class="rolunk-title-word handwritten c-accent gsap"
                 aria-hidden="true"
                 class="handwritten"
               >
@@ -942,11 +962,11 @@
             </div>
 
             <!-- Rolunk img -->
-            <div class="img-container br-20 rolunk-gsap">
+            <div class="img-container br-20 gsap">
               <img src="assets/rolunk_img.jpg" alt="Rólunk" loading="lazy" />
             </div>
 
-            <p class="t-20 text-center c-text2 pl-10 pt-20 rolunk-gsap">
+            <p class="t-20 text-center c-text2 pl-10 pt-20 gsap">
               Küldetésünk kis-és középvállalkozások támogatása projektjeik megjelenésének és webes
               jelenlétének fejlesztésével.
             </p>
@@ -960,19 +980,17 @@
 
           <!-- Rólunk right -->
           <div class="rolunk-right flex flex-col justify-center gap-30">
-            <div
-              class="flex flex-col align-start bg-pop br-20 gap-25 gap-20-xs p-40 p-30-s rolunk-gsap"
-            >
-              <h3 class="t-35 tw-500 c-accent rolunk-gsap">
+            <div class="flex flex-col align-start bg-pop br-20 gap-25 gap-20-xs p-40 p-30-s gsap">
+              <h3 class="t-35 tw-500 c-accent gsap">
                 <i style="font-size: 0.9em; padding-right: 10px" class="fa-solid fa-receipt"></i
                 >Áraink
               </h3>
-              <p class="t-18 tw-300 text-left rolunk-gsap">
+              <p class="t-18 tw-300 text-left gsap gsap">
                 Célunk olyan árakon dolgozni, hogy minden vállalkozás életében természetes szerepet
                 töltsön be a márkaépítés és webes elérhetőség. Ezért minden projektünk egyedi, mely
                 a te helyzetre pontosan illeszkedik.
               </p>
-              <p class="t-18 c-accent text-left rolunk-gsap">
+              <p class="t-18 c-accent text-left gsap">
                 Kérj ajánlatot egyszerűen és tervezzük együtt jövődet!
               </p>
               <a
@@ -997,8 +1015,12 @@
         <!-- FAQ title -->
         <h2 id="faq-title" class="visually-hidden">Gyakori kérdések</h2>
         <div class="faq-title t-30 tw-600 text-center">
-          <div class="faq-title-word" aria-hidden="true">Gyakori</div>
-          <div class="faq-title-word handwritten c-accent" aria-hidden="true" class="handwritten">
+          <div class="faq-title-word gsap" aria-hidden="true">Gyakori</div>
+          <div
+            class="faq-title-word handwritten c-accent gsap"
+            aria-hidden="true"
+            class="handwritten"
+          >
             kérdések
           </div>
         </div>
@@ -1115,7 +1137,7 @@
     <!-- Website JS -->
     <script src="js/home.js" defer></script>
     <script src="js/mobile-toggle.js" defer></script>
-    <!--script src="js/GSAP.js" defer></script-->
+    <script src="js/GSAP.js" defer></script>
     <script src="js/faq.js" defer></script>
   </body>
 </html>
