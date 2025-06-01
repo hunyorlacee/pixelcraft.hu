@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   //Scroll heavy animation
-  /*gsap.utils.toArray(".gsap").forEach((el) => {
+  gsap.utils.toArray(".gsap").forEach((el) => {
     gsap.from(el, {
       y: 150,
       opacity: 0,
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: el,
         start: "top+=10% bottom", // when the element enters the bottom of viewport
-        end: "center center", // when the element is at center of viewport
+        end: "top+=50% center", // when the element is at center of viewport
         scrub: 1, // optional: ties animation progress to scroll
       },
     });
-  });*/
+  });
 
   //Light animation
-  ScrollTrigger.batch(".gsap", {
+  /*ScrollTrigger.batch(".gsap", {
     onEnter: (batch) => {
       gsap.from(batch, {
         y: 150,
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     start: "top+=10% bottom",
     end: "center center",
     lazy: true,
-  });
+  });*/
 
   ScrollTrigger.batch(".gsap-hero-title", {
     onEnter: (batch) => {
