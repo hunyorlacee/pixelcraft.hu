@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.25,
       scrollTrigger: {
         trigger: el,
-        start: "top+=10% bottom", // when the element enters the bottom of viewport
+        start: "top+=20% bottom", // when the element enters the bottom of viewport
         end: "center-=50% center", // when the element is at center of viewport
         scrub: 2, // optional: ties animation progress to scroll
       },

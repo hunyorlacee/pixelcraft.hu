@@ -73,6 +73,9 @@
   will-change: transform, opacity;
   transform: translateY(0);
 }
+.ajanlat-text {
+  max-width: 700px;
+}
 .ajanlat-left,
 .ajanlat-right {
   max-width: 450px;
