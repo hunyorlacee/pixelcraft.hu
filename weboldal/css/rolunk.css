@@ -75,13 +75,16 @@
 .terv {
   min-width: 250px;
   flex: 1 1;
+  border: solid 1px var(--accent-tr);
 }
 .kiegeszito {
   flex: 2;
   min-width: 300px;
+  border: solid 1px var(--accent);
 }
 .egyedi {
   min-width: 300px;
+  border: solid 1px var(--accent-tr);
 }
 .kiegeszites {
   max-width: 600px;
@@ -134,13 +137,16 @@
 .ajanlat-left,
 .ajanlat-right {
   max-width: 450px;
+  min-width: 350px;
 }
 @media screen and (max-width: 990px) {
   .ajanlat-left {
     max-width: 340px;
+    min-width: 300px;
   }
   .ajanlat-right {
-    max-width: 380px;
+    max-width: 400px;
+    min-width: 380px;
   }
 }
 .ajanlat .img-container {
@@ -153,6 +159,9 @@
   object-fit: cover;
   object-position: center;
   margin-left: 10%;
+}
+.ajanlatkero {
+  border: solid 1px var(--accent-tr);
 }
 form {
   display: flex;
@@ -174,7 +183,7 @@ label {
 input,
 textarea {
   background-color: var(--pop);
-  border: solid 2px var(--text2);
+  border: solid 1px var(--text2);
   border-radius: 10px;
   padding: 10px;
   font-size: 16px;
