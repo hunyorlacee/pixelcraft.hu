@@ -7,17 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //Scroll heavy animation
   gsap.utils.toArray(".gsap").forEach((el) => {
     gsap.from(el, {
-      y: 150,
+      y: 200,
       opacity: 0,
-      rotation: gsap.utils.random(-25, 25),
+      rotation: gsap.utils.random(-50, 50),
       duration: 1.15,
       ease: "back",
-      stagger: 0.25,
+      stagger: 0.2,
       scrollTrigger: {
         trigger: el,
-        start: "top+=20% bottom", // when the element enters the bottom of viewport
-        end: "center-=50% center", // when the element is at center of viewport
-        scrub: 2, // optional: ties animation progress to scroll
+        start: "top-=150px bottom", // when the element enters the bottom of viewport
+        end: "top-=250px center", // when the element is at center of viewport
+        scrub: 1, // optional: ties animation progress to scroll
       },
     });
   });

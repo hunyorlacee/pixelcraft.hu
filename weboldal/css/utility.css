@@ -41,6 +41,9 @@
 .table-footer-group {
   display: table-footer-group;
 }
+.white-space-nowrap {
+  white-space: nowrap;
+}
 
 /*flex*/
 .flex {
@@ -560,6 +563,15 @@
 }
 
 /* text */
+.t-12 {
+  font-size: 12px;
+}
+.t-14 {
+  font-size: 14px;
+}
+.t-16 {
+  font-size: 16px;
+}
 .t-18 {
   font-size: 18px;
 }

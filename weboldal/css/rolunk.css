@@ -43,12 +43,67 @@
     min-width: 300px;
   }
 }
-.cf-turnstile {
-  margin: 10px 0;
-}
 
-.form-group .cf-turnstile {
-  align-self: flex-start;
+/* CSOMAGOK */
+
+.csomag {
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 60%, var(--bg) 80%),
+    url("../assets/siker_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+.csomag-title {
+  overflow: visible !important;
+}
+@media screen and (max-width: 767px) {
+  .csomag-title {
+    max-width: 400px;
+  }
+}
+.csomag-title-word {
+  display: inline-block;
+  overflow: visible !important;
+  padding-right: 4px;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}
+.csomag-text {
+  max-width: 700px;
+}
+.csomag-container {
+  max-width: 1000px;
+}
+.terv {
+  min-width: 250px;
+  flex: 1 1;
+}
+.kiegeszito {
+  flex: 2;
+  min-width: 300px;
+}
+.egyedi {
+  min-width: 300px;
+}
+.kiegeszites {
+  max-width: 600px;
+}
+@media screen and (max-width: 990px) {
+  .csomag-left {
+    max-width: 340px;
+  }
+  .csomag-right {
+    max-width: 380px;
+  }
+}
+.csomag .img-container {
+  width: 70%;
+  max-width: 300px;
+}
+.csomag .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-left: 10%;
 }
 
 /* RÓLUNK */
@@ -150,7 +205,6 @@ textarea {
   font-size: 14px;
   margin-top: 5px;
 }
-
 .success {
   background: var(--green-bg);
   color: var(--green);
@@ -159,7 +213,6 @@ textarea {
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 .error-message {
   background: var(--red-bg);
   color: var(--red);
@@ -168,11 +221,9 @@ textarea {
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 .loading {
   display: none;
 }
-
 .spinner {
   border: 2px solid transparent;
   border-top: 2px solid currentColor;
@@ -182,7 +233,6 @@ textarea {
   animation: spin 1s linear infinite;
   display: inline-block;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -190,6 +240,13 @@ textarea {
   100% {
     transform: rotate(360deg);
   }
+}
+.cf-turnstile {
+  margin: 10px 0;
+}
+
+.form-group .cf-turnstile {
+  align-self: flex-start;
 }
 
 /* FAQ */
