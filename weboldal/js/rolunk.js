@@ -54,6 +54,21 @@ window.addEventListener("DOMContentLoaded", () => {
 // Attach the toggleTheme function to the checkbox change event
 document.getElementById("theme-toggle").addEventListener("change", toggleTheme);
 
+//Szolgaltatasok Tag---------------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("openList");
+  const card = document.querySelector(".kiegeszito");
+
+  card.classList.add("kiegeszito-collapsed");
+
+  button.addEventListener("click", () => {
+    const expanded = card.classList.toggle("kiegeszito-expanded");
+    card.classList.toggle("kiegeszito-collapsed", !expanded);
+    button.textContent = expanded ? "Kevesebb" : "Több";
+  });
+});
+
 //Ajanlatkero Form---------------------------------------------------------------------------------
 
 const form = document.getElementById("contactForm");

@@ -87,6 +87,9 @@
     <!-- Swiper stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- Include Lottie library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+
     <!-- Cloudflare Turnstile -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
@@ -844,7 +847,7 @@
           </div>
 
           <!-- Ajánlat bottom -->
-          <div class="flex flex-row flex-wrap gap-20 w-100">
+          <div class="flex flex-row flex-wrap align-start gap-20 w-100">
             <div class="kiegeszito flex flex-col align-start bg-pop gap-5 br-20 p-30 gsap">
               <p class="t-22 c-text tw-500">
                 <i class="bi bi-patch-plus c-accent t-24"></i> Kiegészítő szolgáltatások
@@ -853,48 +856,101 @@
                 Válassz a csomagok mellé vagy akár külön-külön olyan modult, amire projektednek
                 szüksége van
               </p>
-              <div class="flex flex-wrap gap-15 py-20">
-                <span
-                  class="flex flex-col t-16 tw-300 bg-accent-tr px-15 py-5 br-10 white-space-nowrap"
-                  ><p class="c-accent tw-400">
-                    <i class="bi bi-marker-tip c-accent"></i> Egyedi logótervezés
-                  </p>
-                  <p class="t-12 c-text2">Vektoros formátum, többféle verzió</p>
-                </span>
-                <span
-                  class="flex flex-col t-16 tw-300 bg-accent-tr px-15 py-5 br-10 white-space-nowrap"
-                  ><p class="c-accent tw-400">
-                    <i class="bi bi-marker-tip c-accent"></i> Arculati kézikönyv
-                  </p>
-                  <p class="t-12 c-text2">Logó, arculati elemek, grafikák</p>
-                </span>
-                <span
-                  class="flex flex-col t-16 tw-300 bg-accent-tr px-15 py-5 br-10 white-space-nowrap"
-                  ><p class="c-accent tw-400">
-                    <i class="bi bi-marker-tip c-accent"></i> Webáruház modul
-                  </p>
-                  <p class="t-12 c-text2">E-commerce platform integráció</p>
-                </span>
-              </div>
-              <p class="t-24 c-text tw-500">
-                15.000 <span class="t-18 c-text2 tw-400">Ft-tól*</span>
-              </p>
-              <span
-                class="flex flex-col t-16 tw-300 bg-accent-tr px-15 py-5 br-10 white-space-nowrap"
-                ><p class="c-accent tw-400">
-                  <i class="bi bi-marker-tip c-accent"></i> Egyedi logótervezés
+              <div class="tag-list flex flex-wrap gap-10 py-20">
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-stars c-accent"></i> Animációk és interakciók
                 </p>
-                <p class="t-12 c-text2">Vektoros formátum, többféle verzió</p>
-              </span>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-cart3 c-accent"></i> Webáruház integrálás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-palette c-accent"></i> Egyedi logótervezés
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-search-heart c-accent"></i> SEO és Ai optimalizálás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-bezier c-accent"></i> Vektoros grafikák
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-calendar-check c-accent"></i> Időpontfoglaló rendszer
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-envelope-heart c-accent"></i> Email marketing
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-share c-accent"></i> Social média elemek
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-book c-accent"></i> Arculati kézikönyv
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-pencil-square c-accent"></i> Tartalomkészítés
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-translate c-accent"></i> Fordítás és többnyelvűség
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-speedometer2 c-accent"></i> Sebesség optimalizálás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-graph-up c-accent"></i> Google analitikák
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-arrow-left-right c-accent"></i> Migráció és átállás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-tools c-accent"></i> Webhely karbantartás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-shield-check c-accent"></i> Captcha és SPAM védelem
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-server c-accent"></i> Tárhely és domain ügyintézés
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-headset c-accent"></i> Technikai támogatás
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-universal-access c-accent"></i> Akadálymentesítés
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-file-earmark-text c-accent"></i> ÁSZF és nyilatkozatok
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-three-dots c-accent"></i> egyéb
+                </p>
+              </div>
+              <div class="flex flex-row justify-between w-100 pt-10">
+                <p class="t-24 c-text tw-500">
+                  25.000 <span class="t-18 c-text2 tw-400">Ft-tól*</span>
+                </p>
+                <button class="btn btn-primary c-bg bg-accent t-18 tw-500 br-15" id="openList">
+                  Több
+                </button>
+              </div>
             </div>
             <div
               class="egyedi flex flex-1 flex-col align-start justify-between bg-pop br-20 gap-25 gap-20-xs p-30 gsap"
             >
+              <!-- Container -->
+              <div id="lottie-animation" style="width: auto; height: 100px"></div>
+              <!-- Init Script -->
+              <script>
+                lottie.loadAnimation({
+                  container: document.getElementById("lottie-animation"),
+                  renderer: "svg",
+                  loop: true,
+                  autoplay: true,
+                  path: "assets/ai_dark.json", // Path to your converted JSON file
+                });
+              </script>
               <p class="t-16 c-text">
-                <i class="bi bi-braces-asterisk c-accent t-30"></i><br />Egyedi fejlesztési vagy
-                vizuális megoldásra van szükséged projektedhez, esetleg
+                <i class="bi bi-braces-asterisk c-accent"></i> Egyedi fejlesztési vagy vizuális
+                megoldásra van szükséged projektedhez, esetleg
                 <i class="bi bi-stars c-accent"></i>Ai alapú szolgáltatást vezetnél be?
               </p>
+
               <a
                 href="rolunk.html#ajanlat"
                 class="btn btn-primary c-bg bg-accent t-16 tw-500 br-15"
@@ -903,7 +959,7 @@
               ></a>
             </div>
           </div>
-          <p class="kiegeszites t-14 text-center c-text2 tw-400">
+          <p class="kiegeszites t-14 text-center c-text2 tw-400 px-10">
             *Áraink tájékoztató jellegűek és nettó indulóárak, nem minősülnek ajánlattételnek. Az ár
             pontos meghatározásához mindenképpen előzetes ajánlatkérés és konzultáció szükséges
             projektedről.
@@ -936,8 +992,7 @@
           </div>
         </div>
         <p class="ajanlat-text t-22 text-center c-text2 pl-10 pb-30 gsap">
-          Szükséged van egy profi weboldalra, esetleg grafikai tervezésre vagy szöveges tartalom
-          készítésre?
+          Írd meg nekünk milyen projektben gondolkodsz és mi felvesszük veled a kapcsolatot
         </p>
         <!-- Ajánlat container -->
         <div
@@ -958,29 +1013,7 @@
             <p class="t-22 text-center c-text pl-10 pt-20 gsap">
               Kérj ajánlatot egyszerűen és mi tájékoztatunk a lehetőségeidről!
             </p>
-            <div class="flex flex-wrap gap-10 align-center justify-center pt-10">
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-laptop c-accent"></i> weboldal készítés
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-rainbow c-accent"></i> arculattervezés
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-bezier c-accent"></i> grafikai megoldások
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-body-text c-accent"></i> kreatív szövegírás
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-braces c-accent"></i> fejlesztés
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-headset c-accent"></i> támogatás
-              </p>
-              <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
-                <i class="bi bi-person-workspace c-accent"></i> konzultáció
-              </p>
-            </div>
+
             <p class="t-20 text-center c-text pl-10 pt-40 gsap">
               Nálunk minden projekt <span class="handwritten c-accent">egyedi</span>, mely a
               <span class="handwritten c-accent">te helyzetedre</span> pontosan illeszkedik

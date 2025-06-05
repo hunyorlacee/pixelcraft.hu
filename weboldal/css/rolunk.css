@@ -108,8 +108,28 @@
   object-position: center;
   margin-left: 10%;
 }
+.kiegeszito-collapsed .tag-list {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+.kiegeszito-collapsed .tag-list::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(37, 38, 42, 0), var(--pop));
+  pointer-events: none;
+}
+.kiegeszito-expanded .tag-list {
+  max-height: 2000px;
+  transition: max-height 0.3s ease;
+}
 
-/* RÓLUNK */
+/* AJÁNLAT */
 
 .ajanlat {
   background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 60%, var(--bg) 80%),
