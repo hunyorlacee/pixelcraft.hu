@@ -159,7 +159,7 @@ a {
   border: none;
 }
 .btn-secondary {
-  border: solid 2px;
+  border: solid 1px;
   padding: calc(0.4em - 2px) calc(1.5em - 2px);
   background-color: none;
   box-sizing: border-box;
