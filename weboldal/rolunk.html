@@ -87,8 +87,10 @@
     <!-- Swiper stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Include Lottie library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
 
     <!-- Cloudflare Turnstile -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -412,7 +414,10 @@
           </label>
 
           <!-- Navigation action button -->
-          <a href="rolunk.html#ajanlat" class="nav-button bg-pop t-18 br-15" aria-label="Áraink"
+          <a
+            href="rolunk.html#csomag"
+            class="nav-button bg-pop t-18 br-15"
+            aria-label="Áraink és csomagok"
             >Áraink</a
           >
 
@@ -476,7 +481,7 @@
               <a href="rolunk.html">Rólunk</a>
             </li>
             <li role="menuitem" aria-label="Áraink">
-              <a href="rolunk.html#ajanlat" class="c-accent">Áraink</a>
+              <a href="rolunk.html#csomag" class="c-accent">Áraink</a>
             </li>
           </ul>
         </div>
@@ -864,6 +869,9 @@
                   <i class="bi bi-cart3 c-accent"></i> Webáruház integrálás
                 </p>
                 <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
+                  <i class="bi bi-credit-card c-accent"></i> Fizetési átjáró
+                </p>
+                <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
                   <i class="bi bi-palette c-accent"></i> Egyedi logótervezés
                 </p>
                 <p class="t-14 tw-300 bg-accent-tr px-10 py-5 br-10 white-space-nowrap">
@@ -933,28 +941,27 @@
             <div
               class="egyedi flex flex-1 flex-col align-start justify-between bg-pop br-20 gap-25 gap-20-xs p-30 gsap"
             >
-              <!-- Container -->
-              <div id="lottie-animation" style="width: auto; height: 100px"></div>
-              <!-- Init Script -->
-              <script>
-                lottie.loadAnimation({
-                  container: document.getElementById("lottie-animation"),
-                  renderer: "svg",
-                  loop: true,
-                  autoplay: true,
-                  path: "assets/ai_dark.json", // Path to your converted JSON file
-                });
-              </script>
+              <div class="lottie-zoom-wrapper">
+                <dotlottie-player
+                  id="themeLottie"
+                  src="assets/ai_dark.lottie"
+                  background="transparent"
+                  speed="1"
+                  style="width: auto; height: auto"
+                  loop
+                  autoplay
+                ></dotlottie-player>
+              </div>
               <p class="t-16 c-text">
                 <i class="bi bi-braces-asterisk c-accent"></i> Egyedi fejlesztési vagy vizuális
-                megoldásra van szükséged projektedhez, esetleg
+                megoldásra van szükséged projektedhez? Esetleg
                 <i class="bi bi-stars c-accent"></i>Ai alapú szolgáltatást vezetnél be?
               </p>
 
               <a
                 href="rolunk.html#ajanlat"
                 class="btn btn-primary c-bg bg-accent t-16 tw-500 br-15"
-                aria-label="Árajánlat részletek"
+                aria-label="Árajánlat kérés"
                 >Árajánlat <i class="bi bi-arrow-right"></i
               ></a>
             </div>
@@ -993,6 +1000,7 @@
         </div>
         <p class="ajanlat-text t-22 text-center c-text2 pl-10 pb-30 gsap">
           Nálunk minden projekt egyedi, amely a te helyzetedre pontosan illeszkedik
+          <i class="bi bi-paint-bucket c-accent"></i>
         </p>
         <!-- Ajánlat container -->
         <div
@@ -1005,7 +1013,7 @@
               <img
                 id="ajanlat_img"
                 src="assets/rolunk_ajanlat_dark.png"
-                alt="Rólunk"
+                alt="Kérj ajánlatot egyszerűen"
                 loading="lazy"
               />
             </div>
@@ -1204,7 +1212,7 @@
       <p class="p-30 tw-300 text-center">
         © 2025 <span class="c-accent">PixelCraft</span> Minden jog Fenntartva! | Stock fotók:
         Freepik |
-        <a href="rolunk.html#ajanlat" class="c-accent text-plain" aria-label="Áraink link"
+        <a href="rolunk.html#csomag" class="c-accent text-plain" aria-label="Áraink és csomagok"
           >Áraink</a
         >
         |

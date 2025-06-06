@@ -6,6 +6,7 @@ function toggleTheme() {
   const logo = document.getElementById("logo");
   const hero = document.getElementById("hero_img");
   const ajanlat = document.getElementById("ajanlat_img");
+  const lottie = document.getElementById("themeLottie");
 
   if (isDarkMode) {
     // Apply dark mode
@@ -15,6 +16,7 @@ function toggleTheme() {
     logo.src = "assets/pixelcraft_dark.png";
     hero.src = "assets/rolunk_hero_dark.png";
     ajanlat.src = "assets/rolunk_ajanlat_dark.png";
+    lottie.load("assets/ai_dark.lottie");
   } else {
     // Apply light mode
     document.documentElement.classList.add("light-mode");
@@ -23,6 +25,7 @@ function toggleTheme() {
     logo.src = "assets/pixelcraft_light.png";
     hero.src = "assets/rolunk_hero_light.png";
     ajanlat.src = "assets/rolunk_ajanlat_light.png";
+    lottie.load("assets/ai_light.lottie");
   }
 }
 
@@ -33,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const logo = document.getElementById("logo");
   const hero = document.getElementById("hero_img");
   const ajanlat = document.getElementById("ajanlat_img");
+  const lottie = document.getElementById("themeLottie");
 
   if (savedTheme === "light") {
     document.documentElement.classList.add("light-mode");
@@ -41,6 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
     logo.src = "assets/pixelcraft_light.png";
     hero.src = "assets/rolunk_hero_light.png";
     ajanlat.src = "assets/rolunk_ajanlat_light.png";
+    lottie.load("assets/ai_light.lottie");
   } else {
     document.documentElement.classList.remove("light-mode");
     toggleSwitch.checked = true; // Set checkbox to match dark mode
@@ -48,6 +53,7 @@ window.addEventListener("DOMContentLoaded", () => {
     logo.src = "assets/pixelcraft_dark.png";
     hero.src = "assets/rolunk_hero_dark.png";
     ajanlat.src = "assets/rolunk_ajanlat_dark.png";
+    lottie.load("assets/ai_dark.lottie");
   }
 });
 
