@@ -297,13 +297,5 @@ document.getElementById("email").addEventListener("blur", function () {
   }
 });
 
-// ADDED: Debug function to check Turnstile status
-//function debugTurnstile() {
-//console.log("🔍 Turnstile Debug Info:");
-//console.log("- Turnstile object:", window.turnstile);
-//console.log("- Current token:", window.pixelCraftTurnstileToken);
-//console.log("- Turnstile widget element:", document.querySelector(".cf-turnstile"));
-//}
-
 // Call debug function after a delay to ensure everything is loaded
 setTimeout(debugTurnstile, 2000);
