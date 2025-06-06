@@ -1,0 +1,6 @@
+# ENV file with secrets
+.env
+
+GSAP_beta.js
+mail.html
+worker.js
