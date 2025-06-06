@@ -1,6 +1,8 @@
 # ENV file with secrets
 .env
 
+.gitignore
+
 GSAP_beta.js
 email.html
 worker.js
