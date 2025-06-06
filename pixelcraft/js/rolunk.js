@@ -223,7 +223,7 @@ form.addEventListener("submit", async (e) => {
 
   try {
     // Send to Cloudflare Worker
-    const response = await fetch("/api/contact", {
+    const response = await fetch(window.PixelCraftConfig.API_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
