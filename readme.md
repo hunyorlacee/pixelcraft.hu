@@ -1,1 +1,1 @@
-![PixelCraft Weboldal](./pixelcraft/assets/og-image.jpg)
+![PixelCraft Weboldal](https://pixelcraft.hu/assets/og-image.jpg)
