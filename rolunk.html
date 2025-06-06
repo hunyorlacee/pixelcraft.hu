@@ -96,18 +96,7 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-PD7XF9LB");
-    </script>
+    <script src="js/config_rolunk.js"></script>
     <!-- End Google Tag Manager -->
 
     <script type="application/ld+json">
@@ -656,7 +645,7 @@
                     hagyjunk az ügyfelekben
                   </p>
                   <p class="t-14 tw-300 c-accent bg-accent-tr px-10 br-5 contact-email">
-                    <i class="bi bi-envelope"></i> info @ pixelcraft.hu
+                    <i class="bi bi-envelope"></i> info@domain.hu
                   </p>
                 </div>
               </div>
@@ -1041,7 +1030,7 @@
 
             <div class="flex flex-wrap gap-10 align-center justify-center pt-10">
               <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap contact-email">
-                <i class="bi bi-envelope c-accent"></i> info @ pixelcraft.hu
+                <i class="bi bi-envelope c-accent"></i> info@domain.hu
               </p>
               <p class="t-16 tw-300 c-text bg-pop px-15 py-5 br-10 gsap">
                 <i class="bi bi-geo-alt c-accent"></i> Debrecen
@@ -1089,7 +1078,7 @@
                 <div class="form-group">
                   <div
                     class="cf-turnstile"
-                    data-sitekey="0x4AAAAAABfaqx9desx1zH3f"
+                    data-sitekey="config_site_key"
                     data-callback="onTurnstileSuccess"
                     data-expired-callback="onTurnstileExpired"
                     data-error-callback="onTurnstileError"
