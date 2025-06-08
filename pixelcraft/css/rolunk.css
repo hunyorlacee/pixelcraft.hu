@@ -79,11 +79,11 @@
 }
 .kiegeszito {
   flex: 2;
-  min-width: 300px;
+  min-width: 250px;
   border: solid 1px var(--accent);
 }
 .egyedi {
-  min-width: 300px;
+  min-width: 250px;
   border: solid 1px var(--accent-tr);
 }
 .kiegeszites {
@@ -172,12 +172,12 @@
 }
 @media screen and (max-width: 990px) {
   .ajanlat-left {
-    max-width: 340px;
-    min-width: 300px;
+    max-width: 320px;
+    min-width: 280px;
   }
   .ajanlat-right {
     max-width: 400px;
-    min-width: 380px;
+    min-width: 300px;
   }
 }
 .ajanlat .img-container {
