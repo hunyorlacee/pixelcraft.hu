@@ -9,8 +9,8 @@
       name="description"
       content="Egyedi arculattervezés ✓ Logó, színpaletta, tipográfia ✓ Céges arculat, márkaépítés ✓ Online és offline megjelenés ✓ Ingyenes árajánlat!"
     />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-    <link rel="canonical" href="https://pixelcraft.hu/" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+    <link rel="canonical" href="https://pixelcraft.hu/arculat" />
 
     <!-- Additional SEO meta tags -->
     <meta name="author" content="PixelCraft" />
@@ -91,7 +91,71 @@
     <script src="js/config.js"></script>
     <!-- End Google Tag Manager -->
 
-    <!-- Organization Schema (JSON-LD) -->
+    <!-- Webpage Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Arculattervezés - PixelCraft",
+        "url": "https://pixelcraft.hu/arculat",
+        "description": "Egységes vizuális megjelenés tervezése vállalkozásoknak. Logó, színvilág, tipográfia és brand guideline készítése.",
+        "inLanguage": "hu",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://pixelcraft.hu"
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Főoldal",
+            "item": "https://pixelcraft.hu/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Arculat tervezés",
+            "item": "https://pixelcraft.hu/arculat"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Service Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Arculattervezés",
+        "serviceType": "Brand Design",
+        "provider": {
+          "@type": "Organization",
+          "name": "PixelCraft",
+          "url": "https://pixelcraft.hu"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Debrecen, Magyarország"
+        },
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceUrl": "https://pixelcraft.hu/arculat",
+          "availableLanguage": ["hu", "Hungarian"]
+        },
+        "description": "Egységes vizuális megjelenés tervezése vállalkozásoknak: logó, színvilág, tipográfia és brand guideline készítése.",
+        "termsOfService": "https://pixelcraft.hu/rolunk.html#csomag"
+      }
+    </script>
+
+    <!-- FAQ Schema markup -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -137,186 +201,6 @@
               "text": "Az arculattervezési költségek több tényezőtől függenek, például az arculati elemek számától, a projekt komplexitásától és az elkészítés időigényétől. Egy alapvető arculati csomag (logó, színpaletta, betűtípusok) kedvezőbb áron érhető el, míg egy átfogó arculati kézikönyv, amely részletes iránymutatásokat tartalmaz minden vizuális elemhez, nagyobb befektetést igényel. A PixelCraft-nál minden projektet egyedi ajánlattal indítunk, amely az igényeidre és költségvetésedre szabott. Kérj ajánlatot ötletedre, csak néhány kattintás."
             }
           }
-        ]
-      }
-    </script>
-
-    <!-- Organization Schema (JSON-LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "PixelCraft",
-        "alternateName": "PixelCraft",
-        "url": "https://pixelcraft.hu",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://pixelcraft.hu/assets/pixelcraft_light.png",
-          "width": 400,
-          "height": 100
-        },
-        "image": [
-          "https://pixelcraft.hu/assets/og-image.jpg",
-          "https://pixelcraft.hu/assets/pixelcraft_light.png"
-        ],
-        "description": "Weboldal fejlesztés, arculat tervezés és grafikai design szolgáltatások kis- és középvállalkozások számára Debrecenben. Mutasd meg vállalkozásod igazi arcát egyedi weboldalakkal és professzionális arculattal.",
-        "slogan": "Mutasd meg vállalkozásod igazi arcát a világnak",
-        "foundingDate": "2024",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Debrecen",
-          "addressRegion": "Hajdú-Bihar",
-          "addressCountry": "HU",
-          "postalCode": "4000"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "47.5316",
-          "longitude": "21.6273"
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Debrecen"
-          },
-          {
-            "@type": "State",
-            "name": "Hajdú-Bihar"
-          },
-          {
-            "@type": "Country",
-            "name": "Magyarország"
-          }
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": ["Hungarian", "hu"],
-            "url": "https://pixelcraft.hu/rolunk.html#ajanlat",
-            "contactOption": "TollFree"
-          },
-          {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "availableLanguage": ["Hungarian", "hu"],
-            "url": "https://pixelcraft.hu/rolunk.html#ajanlat"
-          }
-        ],
-        "sameAs": ["https://pixelcraft.hu"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "PixelCraft Szolgáltatások",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Weboldal fejlesztés",
-                "description": "Egyedi weboldal tervezés és fejlesztés kis- és középvállalkozások számára. SEO optimalizált, reszponzív és felhasználóbarát weboldalak.",
-                "category": "Web Development",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "PixelCraft"
-                }
-              },
-              "availability": "InStock",
-              "businessFunction": "Sell"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Arculat tervezés",
-                "description": "Egységes vizuális megjelenés tervezése vállalkozásoknak. Logó, színvilág, tipográfia és brand guideline készítése.",
-                "category": "Brand Design",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "PixelCraft"
-                }
-              },
-              "availability": "InStock",
-              "businessFunction": "Sell"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Grafikai munkák",
-                "description": "Professzionális grafikai tervezés: plakátok, szórólapok, social media grafikák, prezentációk és egyéb marketing anyagok.",
-                "category": "Graphic Design",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "PixelCraft"
-                }
-              },
-              "availability": "InStock",
-              "businessFunction": "Sell"
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Szövegírás és SEO",
-                "description": "Kreatív szövegírás és SEO optimalizáció weboldalakhoz és marketing anyagokhoz. Keresőbarát tartalom készítése.",
-                "category": "Content Writing",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "PixelCraft"
-                }
-              },
-              "availability": "InStock",
-              "businessFunction": "Sell"
-            }
-          ]
-        },
-        "knowsAbout": [
-          "Weboldal fejlesztés",
-          "Arculat tervezés",
-          "Grafikai design",
-          "SEO optimalizáció",
-          "Márkaépítés",
-          "Digitális marketing",
-          "Felhasználói élmény (UX)",
-          "Responsive design",
-          "Brand identity"
-        ],
-        "makesOffer": [
-          {
-            "@type": "Offer",
-            "name": "Ingyenes konzultáció",
-            "description": "Ingyenes első konzultáció új ügyfelek számára projektjeik megbeszéléséhez.",
-            "price": "0",
-            "priceCurrency": "HUF"
-          },
-          {
-            "@type": "Offer",
-            "name": "Egyedi árajánlat",
-            "description": "Minden projekt egyedi, személyre szabott árajánlatot kap a konkrét igények alapján.",
-            "url": "https://pixelcraft.hu/rolunk.html#ajanlat"
-          }
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Kis- és középvállalkozások",
-          "geographicArea": {
-            "@type": "Place",
-            "name": "Debrecen, Hajdú-Bihar, Magyarország"
-          }
-        },
-        "brand": {
-          "@type": "Brand",
-          "name": "PixelCraft",
-          "logo": "https://pixelcraft.hu/assets/pixelcraft_light.png",
-          "slogan": "Mutasd meg vállalkozásod igazi arcát a világnak"
-        },
-        "mission": "Támogatni kis-és középvállalkozások projektjeinek megjelenését és webes jelenlétének fejlesztését tudatos márkaépítéssel.",
-        "specialty": [
-          "Egyedi weboldal fejlesztés",
-          "Átgondolt arculattervezés",
-          "Professzionális grafikai munkák",
-          "SEO optimalizált tartalom",
-          "Kisvállalkozás-barát árazás"
         ]
       }
     </script>

@@ -9,7 +9,7 @@
       name="description"
       content="Mutasd meg vállalkozásod igazi arcát! Egyedi weboldal, arculat és grafikai tervezés, amellyel kiemelkedsz a versenytársak közül. Kezdjük el együtt!"
     />
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
     <link rel="canonical" href="https://pixelcraft.hu/" />
 
     <!-- Additional SEO meta tags -->
@@ -91,6 +91,49 @@
     <!-- Google Tag Manager -->
     <script src="js/config.js"></script>
     <!-- End Google Tag Manager -->
+
+    <!-- Website Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PixelCraft",
+        "alternateName": "PixelCraft",
+        "url": "https://pixelcraft.hu"
+      }
+    </script>
+
+    <!-- Webpage Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "PixelCraft - Profi webes megjelenés projektednek",
+        "url": "https://pixelcraft.hu/",
+        "description": "Mutasd meg vállalkozásod igazi arcát! Egyedi weboldal, arculat és grafikai tervezés, amellyel kiemelkedsz a versenytársak közül.",
+        "inLanguage": "hu",
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://pixelcraft.hu/"
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb Schema markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Főoldal",
+            "item": "https://pixelcraft.hu/"
+          }
+        ]
+      }
+    </script>
 
     <!-- FAQ Schema (JSON-LD) -->
     <script type="application/ld+json">
@@ -204,7 +247,11 @@
             "url": "https://pixelcraft.hu/rolunk.html#ajanlat"
           }
         ],
-        "sameAs": ["https://pixelcraft.hu"],
+        "sameAs": [
+          "https://www.facebook.com/pixelcraft.hu",
+          "https://www.instagram.com/pixelcraft.hu",
+          "https://pixelcraft.hu"
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "PixelCraft Szolgáltatások",
