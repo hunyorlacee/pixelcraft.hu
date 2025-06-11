@@ -189,6 +189,8 @@
 .swiper-card-szolgaltatas {
   width: 100%;
   box-sizing: border-box;
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 .swiper-card-szolgaltatas-1 {
   background: url("../assets/weboldal_bg.jpg") no-repeat top center;
