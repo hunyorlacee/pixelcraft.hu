@@ -129,10 +129,57 @@ a {
 
 /*border-color*/
 .br-accent {
+  border: solid 1px;
   border-color: var(--accent);
 }
 .br-text {
+  border: solid 1px;
   border-color: var(--text);
+}
+
+.br-pop {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
+}
+.br-accent {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--accent) 95%, var(--text) 5%);
+}
+.br-blue {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--blue) 95%, var(--text) 5%);
+}
+.br-purple {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--purple) 95%, var(--text) 5%);
+}
+.br-yellow {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--yellow) 95%, var(--text) 5%);
+}
+.br-green {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--green) 95%, var(--text) 5%);
+}
+.br-accent-tr {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--accent-tr) 99%, var(--text) 1%);
+}
+.br-blue-tr {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--blue-bg) 95%, var(--text) 5%);
+}
+.br-purple-tr {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--purple-bg) 95%, var(--text) 5%);
+}
+.br-yellow-tr {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--yellow-bg) 95%, var(--text) 5%);
+}
+.br-green-tr {
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--green-bg) 95%, var(--text) 5%);
 }
 
 /*font*/
@@ -213,6 +260,8 @@ nav li:hover {
   background-color: var(--pop);
   border-radius: 15px;
   transform: scale(1.03);
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 .menu-icon {
   padding-right: 5px;
@@ -250,6 +299,8 @@ nav img {
   font-size: 18px;
   height: 40px;
   transition: transform 0.25s ease;
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 .nav-button:hover {
   transform: scale(1.05);
@@ -309,6 +360,8 @@ nav img {
   background-color: #edf0f2;
   transition: 0.4s;
   border-radius: 30px;
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 .slider:before {
   position: absolute;
@@ -395,6 +448,8 @@ input:checked + .slider:before {
   overflow: hidden;
   background-color: var(--pop);
   border-radius: 15px;
+  border: solid 1px;
+  border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 .mobile-card {
   width: 100%;
