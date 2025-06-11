@@ -90,7 +90,6 @@
   background: var(--pop);
   color: var(--color1);
   border-radius: 15px;
-  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
