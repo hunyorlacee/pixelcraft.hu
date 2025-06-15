@@ -2038,6 +2038,12 @@
   }
 
   /* text */
+  .t-14-s {
+    font-size: 14px;
+  }
+  .t-16-s {
+    font-size: 16px;
+  }
   .t-18-s {
     font-size: 18px;
   }
@@ -2496,6 +2502,9 @@
   }
 
   /* text */
+  .t-16-xs {
+    font-size: 16px;
+  }
   .t-18-xs {
     font-size: 18px;
   }
