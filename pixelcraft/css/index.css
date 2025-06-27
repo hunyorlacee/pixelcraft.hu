@@ -1,7 +1,7 @@
 /* HERO */
 
 .hero {
-  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 80%),
+  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 20%, var(--bg) 80%),
     url("../assets/weboldal_hero_bg.jpg") no-repeat center center;
   background-size: cover;
 }
