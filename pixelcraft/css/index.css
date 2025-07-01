@@ -1,8 +1,14 @@
 /* HERO */
 
 .hero {
-  background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 20%, var(--bg) 80%),
-    url("../assets/weboldal_hero_bg.jpg") no-repeat center center;
+  background: linear-gradient(
+      to bottom,
+      var(--bg) 0%,
+      var(--bg-tr) 12%,
+      var(--bg-tr) 60%,
+      var(--bg) 80%
+    ),
+    url("../assets/hero_bg_1.jpg") no-repeat center top 20%;
   background-size: cover;
 }
 .hero-title {
@@ -17,18 +23,18 @@
   transform: translateY(0);
 }
 .hero-text-word {
-  background-color: var(--pop);
+  background-color: var(--text);
   border-radius: 15px;
   padding: 10px 25px;
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--bg);
   display: inline-block;
   margin: 8px 5px;
   transform: translateY(0);
-  box-shadow: 0 0 40px 0 var(--bg);
+  //box-shadow: 0 0 40px 0 var(--bg);
   will-change: transform, opacity;
   border: solid 1px;
   border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
