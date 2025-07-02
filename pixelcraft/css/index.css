@@ -36,12 +36,12 @@
   transform: translateY(0);
   /*box-shadow: 0 0 40px 0 var(--bg);*/
   will-change: transform, opacity;
-  border: solid 1px var(--text2) !important;
+  border: none;
   border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 
 .hero-text-word:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .hero-text-word i {
