@@ -4,11 +4,11 @@
   background: linear-gradient(
       to bottom,
       var(--bg) 0%,
-      var(--bg-tr) 12%,
-      var(--bg-tr) 60%,
+      var(--bg-tr-hero) 12%,
+      var(--bg-tr-hero) 60%,
       var(--bg) 80%
     ),
-    url("../assets/hero_bg_1.jpg") no-repeat center top 20%;
+    url("../assets/hero_bg_4.jpg") no-repeat center center;
   background-size: cover;
 }
 .hero-title {
@@ -34,9 +34,9 @@
   display: inline-block;
   margin: 8px 5px;
   transform: translateY(0);
-  //box-shadow: 0 0 40px 0 var(--bg);
+  /*box-shadow: 0 0 40px 0 var(--bg);*/
   will-change: transform, opacity;
-  border: solid 1px;
+  border: solid 1px var(--text2) !important;
   border-color: color-mix(in srgb, var(--pop) 95%, var(--text) 5%);
 }
 
