@@ -105,7 +105,7 @@
 
 .siker {
   background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 60%, var(--bg) 80%),
-    url("../assets/siker_bg.jpg") no-repeat center center;
+    url("../assets/siker_bg_1.jpg") no-repeat center center;
   background-size: cover;
 }
 .siker-title {
@@ -153,7 +153,7 @@
 
 .szolgaltatas {
   background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-tr) 50%, var(--bg) 100%),
-    url("../assets/szolgaltatas_bg.jpg") no-repeat center center;
+    url("../assets/szolgaltatas_bg_1.jpg") no-repeat center center;
   background-size: cover;
 }
 .szolgaltatas-container {
