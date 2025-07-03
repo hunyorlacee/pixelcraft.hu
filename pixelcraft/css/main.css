@@ -4,7 +4,7 @@
   /* Colors */
   --bg: #121212;
   --bg-tr: rgb(18, 18, 18, 0.95);
-  --bg-tr-hero: rgb(18, 18, 18, 0.7);
+  --bg-tr-hero: rgb(18, 18, 18, 0.75);
   --pop: #25262a;
   --text: #ffffff;
   --text2: #d8d8d8;
@@ -32,7 +32,7 @@
 .light-mode {
   --bg: #fff;
   --bg-tr: rgb(255, 255, 255, 0.95);
-  --bg-tr-hero: rgb(255, 255, 255, 0.7);
+  --bg-tr-hero: rgb(255, 255, 255, 0.75);
   --text: #222222;
   --text2: #747474;
   --pop: #e9edef;
