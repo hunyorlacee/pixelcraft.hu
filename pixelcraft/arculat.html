@@ -75,6 +75,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
+    <!-- Cookie notice -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css"
+    />
+
     <!-- CSS stylesheets -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/utility.css" />
@@ -1040,5 +1046,288 @@
     <script src="js/mobile-toggle.js" defer></script>
     <script src="js/GSAP.js" defer></script>
     <script src="js/faq.js" defer></script>
+
+    <!--################################### Cookie Notice ###################################-->
+
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PD7XF9LB"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <button type="button" class="cookie-settings-btn" data-cc="show-preferencesModal">
+      <svg height="24px" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M257.5 27.6c-.8-5.4-4.9-9.8-10.3-10.6c-22.1-3.1-44.6 .9-64.4 11.4l-74 39.5C89.1 78.4 73.2 94.9 63.4 115L26.7 190.6c-9.8 20.1-13 42.9-9.1 64.9l14.5 82.8c3.9 22.1 14.6 42.3 30.7 57.9l60.3 58.4c16.1 15.6 36.6 25.6 58.7 28.7l83 11.7c22.1 3.1 44.6-.9 64.4-11.4l74-39.5c19.7-10.5 35.6-27 45.4-47.2l36.7-75.5c9.8-20.1 13-42.9 9.1-64.9c-.9-5.3-5.3-9.3-10.6-10.1c-51.5-8.2-92.8-47.1-104.5-97.4c-1.8-7.6-8-13.4-15.7-14.6c-54.6-8.7-97.7-52-106.2-106.8zM208 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM144 336a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm224-64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+        />
+      </svg>
+    </button>
+    <script type="module">
+      import * as CookieConsent from "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.esm.js";
+
+      const CAT_NECESSARY = "necessary";
+      const CAT_ANALYTICS = "analytics";
+      const CAT_ADVERTISEMENT = "advertisement";
+      const CAT_FUNCTIONALITY = "functionality";
+      const CAT_SECURITY = "security";
+
+      const SERVICE_AD_STORAGE = "ad_storage";
+      const SERVICE_AD_USER_DATA = "ad_user_data";
+      const SERVICE_AD_PERSONALIZATION = "ad_personalization";
+      const SERVICE_ANALYTICS_STORAGE = "analytics_storage";
+      const SERVICE_FUNCTIONALITY_STORAGE = "functionality_storage";
+      const SERVICE_PERSONALIZATION_STORAGE = "personalization_storage";
+      const SERVICE_SECURITY_STORAGE = "security_storage";
+
+      //------------------------------------------------------------------------------------------------
+
+      //Initialize Google Tag Manager with consent configuration
+      function initializeGTM(gtmId) {
+        // Load GTM script
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+        document.head.appendChild(script);
+
+        // Initialize dataLayer with GTM
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+      }
+
+      //------------------------------------------------------------------------------------------------
+
+      // 1. Define dataLayer and the gtag function.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // 2. Set default consent to 'denied' (this should happen before changing any other dataLayer)
+      gtag("consent", "default", {
+        [SERVICE_AD_STORAGE]: "denied",
+        [SERVICE_AD_USER_DATA]: "denied",
+        [SERVICE_AD_PERSONALIZATION]: "denied",
+        [SERVICE_ANALYTICS_STORAGE]: "denied",
+        [SERVICE_FUNCTIONALITY_STORAGE]: "denied",
+        [SERVICE_PERSONALIZATION_STORAGE]: "denied",
+        [SERVICE_SECURITY_STORAGE]: "denied",
+        // Enhanced for Consent Mode v2
+        region: [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+        ], // EEA countries
+      });
+
+      // 3. Initialize GTM - Replace 'GTM-XXXXXXX' with your actual GTM ID
+      initializeGTM("GTM-PD7XF9LB");
+
+      //------------------------------------------------------------------------------------------------
+
+      /**
+       * Update gtag consent according to the users choices made in CookieConsent UI
+       */
+      function updateGtagConsent() {
+        // Check if entire categories are accepted instead of individual services
+        const analyticsAccepted = CookieConsent.acceptedCategory(CAT_ANALYTICS);
+        const advertisementAccepted = CookieConsent.acceptedCategory(CAT_ADVERTISEMENT);
+        const functionalityAccepted = CookieConsent.acceptedCategory(CAT_FUNCTIONALITY);
+        const securityAccepted = CookieConsent.acceptedCategory(CAT_SECURITY);
+
+        gtag("consent", "update", {
+          [SERVICE_ANALYTICS_STORAGE]: analyticsAccepted ? "granted" : "denied",
+          [SERVICE_AD_STORAGE]: advertisementAccepted ? "granted" : "denied",
+          [SERVICE_AD_USER_DATA]: advertisementAccepted ? "granted" : "denied",
+          [SERVICE_AD_PERSONALIZATION]: advertisementAccepted ? "granted" : "denied",
+          [SERVICE_FUNCTIONALITY_STORAGE]: functionalityAccepted ? "granted" : "denied",
+          [SERVICE_PERSONALIZATION_STORAGE]: functionalityAccepted ? "granted" : "denied",
+          [SERVICE_SECURITY_STORAGE]: securityAccepted ? "granted" : "denied",
+        });
+
+        /*console.log("Consent updated:", {
+    analytics: analyticsAccepted,
+    advertisement: advertisementAccepted,
+    functionality: functionalityAccepted,
+    security: securityAccepted,
+  });*/
+      }
+
+      //Modular extensions
+
+      //------------------------------------------------------------------------------------------------
+
+      //Google Analytics individual "G-XXXXXXXXX" ID
+      //Category: Analytics
+
+      //------------------------------------------------------------------------------------------------
+
+      //Facebook Pixel
+      //Category: Advertisement
+
+      //------------------------------------------------------------------------------------------------
+
+      //Tiktok Pixel
+      //Category: Advertisement
+
+      //------------------------------------------------------------------------------------------------
+
+      CookieConsent.run({
+        // Trigger consent update when user choices change
+        onFirstConsent: () => {
+          updateGtagConsent();
+        },
+        onConsent: () => {
+          updateGtagConsent();
+        },
+        onChange: () => {
+          updateGtagConsent();
+        },
+
+        // Configure categories - removed individual services to enable group-level toggling
+        categories: {
+          [CAT_NECESSARY]: {
+            enabled: true, // this category is enabled by default
+            readOnly: true, // this category cannot be disabled
+          },
+          [CAT_ANALYTICS]: {
+            autoClear: {
+              cookies: [
+                {
+                  name: /^_ga/, // regex: match all cookies starting with '_ga'
+                },
+                {
+                  name: "_gid", // string: exact cookie name
+                },
+              ],
+            },
+          },
+          [CAT_ADVERTISEMENT]: {},
+          [CAT_FUNCTIONALITY]: {},
+          [CAT_SECURITY]: {},
+        },
+
+        language: {
+          default: "hu",
+          translations: {
+            hu: {
+              consentModal: {
+                title: "Süti, süti, cookie..",
+                description:
+                  "Oldalunk cookie-kat használ a működéshez és a felhasználói élmény javításához.",
+                closeIconLabel: "X",
+                acceptAllBtn: "Összes elfogadása",
+                acceptNecessaryBtn: "Csak szükségesek",
+                showPreferencesBtn: "Beállítások kezelése",
+                footer:
+                  '<a href="/adatvedelem">Adatvédelmi tájékoztató</a>\n<a href="/cookie-szabalyzat">Cookie szabályzat</a>',
+              },
+              preferencesModal: {
+                title: "Cookie preferenciák kezelése",
+                acceptAllBtn: "Összes elfogadása",
+                acceptNecessaryBtn: "Csak szükségesek",
+                savePreferencesBtn: "Beállítások mentése",
+                closeIconLabel: "Bezárás",
+                serviceCounterLabel: "Szolgáltatás|Szolgáltatások",
+                sections: [
+                  {
+                    title: "Cookie használat",
+                    description:
+                      "Cookie-kat használunk weboldalunk működtetéséhez és szolgáltatásaink nyújtásához. Az alábbi kategóriákban állíthatja be preferenciáit.",
+                  },
+                  {
+                    title: "Feltétlenül szükséges cookie-k",
+                    description:
+                      "Ezek a cookie-k elengedhetetlenek a weboldal alapvető funkcióinak működéséhez.",
+                    linkedCategory: CAT_NECESSARY,
+                  },
+                  {
+                    title: "Teljesítmény és analitika",
+                    description:
+                      "Az elemzéshez használt cookie-k segítenek adatok gyűjtésében, amelyek lehetővé teszik a szolgáltatások számára, hogy megértsék, hogyan használják a felhasználók az adott szolgáltatást. Ezek az információk lehetővé teszik a szolgáltatások számára a tartalom fejlesztését és jobb funkciók létrehozását, amelyek javítják a felhasználói élményt.",
+                    linkedCategory: CAT_ANALYTICS,
+                    cookieTable: {
+                      headers: {
+                        name: "Név",
+                        domain: "Szolgáltatás",
+                        description: "Leírás",
+                        expiration: "Lejárat",
+                      },
+                      body: [
+                        {
+                          name: "_ga",
+                          domain: "Google Analytics",
+                          description:
+                            'A <a href="https://business.safety.google/adscookies/">Google Analytics</a> által beállított cookie',
+                          expiration: "2 év",
+                        },
+                        {
+                          name: "_gid",
+                          domain: "Google Analytics",
+                          description:
+                            'A <a href="https://business.safety.google/adscookies/">Google Analytics</a> által beállított cookie',
+                          expiration: "24 óra",
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    title: "Hirdetések és konverziók",
+                    description:
+                      "A Google cookie-t használ a hirdetésekhez, beleértve a hirdetések megjelenítését és renderelését, a hirdetések személyre szabását, a felhasználónak megjelenített hirdetések számának korlátozását, a megállítani választott hirdetések elnémítását és a hirdetések hatékonyságának mérését.",
+                    linkedCategory: CAT_ADVERTISEMENT,
+                  },
+                  {
+                    title: "Funkcionalitás",
+                    description:
+                      "A funkcionalitáshoz használt cookie-k lehetővé teszik a felhasználók számára, hogy kapcsolatba lépjenek egy szolgáltatással vagy oldallal, hogy hozzáférjenek a szolgáltatás alapvető funkcióihoz. Az alapvető szolgáltatásoknak tekintett dolgok közé tartoznak az olyan beállítások, mint a felhasználó nyelvválasztása, a szolgáltatás karbantartását és fejlesztését segítő termékoptimalizációk, valamint a felhasználó munkamenetére vonatkozó információk fenntartása, például a kosár tartalma.",
+                    linkedCategory: CAT_FUNCTIONALITY,
+                  },
+                  {
+                    title: "Biztonság",
+                    description:
+                      "A biztonsághoz használt cookie-k hitelesítik a felhasználókat, megakadályozzák a csalást és védik a felhasználókat, miközben kapcsolatba lépnek egy szolgáltatással.",
+                    linkedCategory: CAT_SECURITY,
+                  },
+                  {
+                    title: "További információk",
+                    description:
+                      'Kérdés esetén olvassa el <a href="/cookie-szabalyzat">Cookie szabályzatunkat</a>.',
+                  },
+                ],
+              },
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>
